@@ -91,7 +91,7 @@ const HomeLayout = ({ children }) => {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             placeholder="Search ..."
-            className="py-1 duration-200 px-4 max-md:px-2 border max-md:text-xs text-sm rounded-s-md outline-none focus:outline-none active:outline-none min-w-[20vw] max-md:w-[40vw] "
+            className="py-1 duration-200 px-4 max-md:px-2 border max-md:text-xs text-sm outline-none focus:outline-none active:outline-none bg-transparent min-w-[20vw] max-md:w-[40vw] "
           />
           <button className="py-1 duration-200 px-3 max-md:px-2 rounded-r-md bg-[#242424] border-black border max-md:text-xs text-sm font-semibold text-white">
             Search
