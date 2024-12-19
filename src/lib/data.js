@@ -37,3 +37,67 @@ export const menuList = [
     active: false,
   },
 ];
+
+// * products data
+export const productsData = [
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt2.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt3.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt4.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt5.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt2.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt3.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt4.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt5.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt2.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt3.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+];

@@ -3,20 +3,20 @@ import HomeLayout from "../../extra/HomeLayout";
 import HomeSlider from "../../extra/HomeSlider";
 import TopProducts from "../../extra/TopProducts";
 
-const Home = () => {
-  return (
-    <div>
-      <HomeLayout>
-        {/* top banner */}
-        <div className="w-full h-auto">
-          <HomeSlider />
-        </div>
+const Home = () => (
+  <div>
+    <HomeLayout>
+      {/* top banner */}
+      <div className="flex items-center justify-center w-full h-auto">
+        <HomeSlider />
+      </div>
 
-        {/* top products of the season */}
+      {/* top products of the season */}
+      <div className="flex items-center justify-center w-full h-auto">
         <TopProducts />
-      </HomeLayout>
-    </div>
-  );
-};
+      </div>
+    </HomeLayout>
+  </div>
+);
 
 export default Home;
