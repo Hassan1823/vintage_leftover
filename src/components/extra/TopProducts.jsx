@@ -11,7 +11,7 @@ const TopProducts = () => {
             activeCat !== "Men" && "border-r"
           } px-2 py-1 duration-500 rounded-s ${
             activeCat === "All" && "bg-slate-400 rounded bg-opacity-30"
-          }  max-md:min-w-[17vw] min-w-[10vw] w-auto`}
+          }  max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
         >
           All
         </button>
@@ -21,7 +21,7 @@ const TopProducts = () => {
             ${activeCat !== "Women" && "border-r"}
        px-2 py-1 duration-500 rounded-s ${
          activeCat === "Men" && "bg-slate-400 rounded bg-opacity-30"
-       } max-md:min-w-[17vw] min-w-[10vw] w-auto`}
+       } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
         >
           Men
         </button>
@@ -29,7 +29,7 @@ const TopProducts = () => {
           onClick={() => setActiveCat("Women")}
           className={`px-2 py-1 duration-500 rounded-s ${
             activeCat === "Women" && "bg-slate-400 rounded bg-opacity-30"
-          } max-md:min-w-[17vw] min-w-[10vw] w-auto`}
+          } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
         >
           Women
         </button>
