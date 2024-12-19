@@ -20,7 +20,7 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
         <button
           onClick={() => setShowMenu(!showMenu)}
           // className="hidden duration-500 max-md:block"
-          className="duration-500 "
+          className="pt-1 duration-500"
         >
           {showMenu ? (
             <IoClose className="text-[#242424] duration-500 size-6" />

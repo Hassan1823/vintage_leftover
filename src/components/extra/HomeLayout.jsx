@@ -19,7 +19,7 @@ const HomeLayout = ({ children }) => {
   return (
     <>
       {/* header starts here  */}
-      <div className="flex items-center justify-between w-full h-auto px-[1%] md:pt-[0.2%] max-md:py-[1%] text-center bg-transparent duration-200">
+      <div className="flex items-center justify-between w-full h-auto max-md:px-[3vw] px-[1%] md:pt-[0.2%] max-md:py-[1%] text-center bg-transparent duration-200">
         {/* menu button */}
         <button
           onClick={() => setShowMenu(!showMenu)}
