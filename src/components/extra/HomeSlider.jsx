@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const bannerImg = "/public/banner9.png";
+const bannerImg = "/banner9.png";
 
 const HomeSlider = () => {
   return (
