@@ -1,11 +1,19 @@
 import React from "react";
 import HomeLayout from "../../extra/HomeLayout";
+import HomeSlider from "../../extra/HomeSlider";
+import TopProducts from "../../extra/TopProducts";
 
 const Home = () => {
   return (
     <div>
       <HomeLayout>
-        <h1 className="">Hello Home layout</h1>
+        {/* top banner */}
+        <div className="w-full h-auto">
+          <HomeSlider />
+        </div>
+
+        {/* top products of the season */}
+        <TopProducts />
       </HomeLayout>
     </div>
   );

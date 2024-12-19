@@ -1,0 +1,21 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const bannerImg = "/public/banner9.png";
+
+const HomeSlider = () => {
+  return (
+    <Link
+      to={"/"}
+      className="flex items-center justify-center w-full h-auto mt-[.5vh]"
+    >
+      <img
+        src={bannerImg}
+        alt="banner img"
+        className="object-contain w-[98%] md:w-[95vw] lg:w-[90vw] rounded-md h-auto max-h-[70vh]"
+      />
+    </Link>
+  );
+};
+
+export default HomeSlider;

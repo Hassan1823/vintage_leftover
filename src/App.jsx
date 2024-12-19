@@ -16,6 +16,12 @@ function App() {
       <Routes>
         {/* home route */}
         <Route path="/" element={<Home />} />
+        <Route path="/men" element={<Home />} />
+        <Route path="/women" element={<Home />} />
+        <Route path="/sale" element={<Home />} />
+        <Route path="/about" element={<Home />} />
+        <Route path="/cart" element={<Home />} />
+        <Route path="/profile" element={<Home />} />
       </Routes>
     </>
   );

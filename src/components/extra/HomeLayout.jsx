@@ -62,7 +62,7 @@ const HomeLayout = ({ children }) => {
         <div className="flex items-center duration-200 justify-end h-auto max-md:w-auto w-[30%] gap-[2%] px-[1%]">
           {/* user profile */}
           <Link
-            to={"/"}
+            to={"/profile"}
             className="flex items-center max-md:hidden duration-200 justify-center w-[4vw] h-[4vh] p-[2%] rounded-full bg-[#fffdfd]"
           >
             <CgProfile className="text-[#242424]  lg:size-8 md:size-6 sm:size-5" />
@@ -70,7 +70,7 @@ const HomeLayout = ({ children }) => {
 
           {/* cart */}
           <Link
-            to={"/"}
+            to={"/cart"}
             className="flex items-center justify-center duration-200 max-sm:w-[10vw] max-md:w-[8vw] w-[5vw] h-[5vh] p-[1%] md:p-[2%] rounded-full shadow bg-[#242424]"
           >
             <FiShoppingCart className="text-white lg:size-5 md:size-4 sm:size-3" />
@@ -100,7 +100,7 @@ const HomeLayout = ({ children }) => {
       </div>
 
       {/* here come the children */}
-      {children}
+      <div className="p-[1%] md:p-[.8%] lg:p-[.5%]">{children}</div>
 
       {/* showing mobile menu */}
       {showMenu && <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} />}

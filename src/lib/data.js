@@ -1,3 +1,10 @@
+// * phone number
+export const phoneNumber = "+92 3085504450";
+
+// * email
+export const vintageEmail = "vintageleftover@gmail.com";
+
+// * menu list
 export const menuList = [
   {
     label: "Home",
