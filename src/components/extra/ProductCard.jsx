@@ -7,7 +7,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 
 const ProductCard = ({ data }) => {
   return (
-    <div className="w-[15vw] max-sm:w-[45vw] max-md:w-[25vw] max-lg:w-[20vw] gap-y-[2%] max-sm:h-[40vh] max-md:h-[50vh] h-[60vh] border-[0.5px] rounded flex flex-col justify-between items-center hover:shadow-md hover:scale-[101%] cursor-pointer p-[0.3%] duration-300">
+    <div className="w-[15vw] max-sm:w-[45vw] max-md:w-[25vw] max-lg:w-[20vw] gap-y-[2%] max-sm:h-[45vh] max-md:h-[50vh] h-[60vh] border-[0.5px] rounded flex flex-col justify-between items-center hover:shadow-md hover:scale-[101%] cursor-pointer p-[0.3%] duration-300 max-md:mt-[1vh] mt-0">
       <img
         src={data?.productImg}
         alt="product img"
