@@ -26,7 +26,7 @@ const ProductCard = ({ data }) => {
       {/* bottom container */}
       <div className="w-full h-auto flex justify-between px-[1vw] items-center  rounded-md">
         <button className="flex items-center duration-200 justify-center w-auto h-auto p-[2%]  bg-[#fffdfd] space-x-1 ">
-          <span className="text-[0.6rem] font-semibold capitalize ">
+          <span className="text-[0.6rem] font-semibold capitalize text-nowrap whitespace-nowrap">
             Add to samples
           </span>
           <MdFavoriteBorder className="text-[#242424] max-sm:size-4 size-5" />
