@@ -10,8 +10,8 @@ import { CgProfile } from "react-icons/cg";
 import { FiFacebook, FiInstagram, FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { PiTiktokLogoLight } from "react-icons/pi";
-import { SlSocialYoutube } from "react-icons/sl";
+import { PiTiktokLogo } from "react-icons/pi";
+import { TbBrandYoutube } from "react-icons/tb";
 
 const MobileMenu = ({ showMenu, setShowMenu }) => {
   return (
@@ -98,14 +98,14 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
-            <PiTiktokLogoLight className="text-[#242424] size-5" />
+            <PiTiktokLogo className="text-[#242424] size-5" />
           </Link>
           <Link
             to={"/"}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
-            <SlSocialYoutube className="text-[#242424] size-5" />
+            <TbBrandYoutube className="text-[#242424] size-5" />
           </Link>
         </div>
 
