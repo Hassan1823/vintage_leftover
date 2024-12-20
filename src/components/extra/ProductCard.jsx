@@ -20,7 +20,7 @@ const ProductCard = ({ data }) => {
       {/* price container */}
       <div className="flex items-center rounded-md border border-[#242424] w-full h-auto max-sm:text-xs text-sm justify-evenly">
         <span className="line-through">{`Rs ${data.oldPrice}`}</span>
-        <span className="font-semibold">{`Rs ${data.newPrice}`}</span>
+        <span className="font-semibold animate-pulse">{`Rs ${data.newPrice}`}</span>
       </div>
 
       {/* bottom container */}

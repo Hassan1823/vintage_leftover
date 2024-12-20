@@ -62,7 +62,7 @@ const HomeLayout = ({ children }) => {
         <div className="flex items-center duration-200 justify-end h-auto max-md:w-auto w-[30%] gap-[2%] px-[1%]">
           {/* user profile */}
           <Link
-            to={"/profile"}
+            to={"/login"}
             className="flex items-center max-md:hidden duration-200 justify-center w-[4vw] h-[4vh] p-[2%] rounded-full bg-[#fffdfd]"
           >
             <CgProfile className="text-[#242424]  lg:size-8 md:size-6 sm:size-5" />

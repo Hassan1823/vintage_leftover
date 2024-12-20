@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const bannerImg = "/banner9.png";
 
-const HomeSlider = () => {
+const BannerImage = () => {
   return (
     <Link
       to={"/"}
-      className="flex items-center justify-center w-full h-auto mt-[.5vh]"
+      className="flex items-center justify-center w-full h-auto my-[.5vh]"
     >
       <img
         src={bannerImg}
@@ -18,4 +18,4 @@ const HomeSlider = () => {
   );
 };
 
-export default HomeSlider;
+export default BannerImage;

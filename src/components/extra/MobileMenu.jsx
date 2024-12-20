@@ -43,7 +43,7 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
         {/* profile and cart */}
         <div className="my-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
           <Link
-            to={"/profile"}
+            to={"/login"}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
@@ -96,7 +96,6 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
         {/* phone number */}
         <button className="flex font-semibold space-x-1 text-xs items-center duration-200 justify-center w-full h-auto rounded-full bg-[#fffdfd]">
           <span>{phoneNumber}</span>
-          {/* <SiWhatsapp className="text-[#242424] size-3 font-semibold" /> */}
         </button>
 
         {/* email */}
