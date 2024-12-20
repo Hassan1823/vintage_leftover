@@ -11,10 +11,12 @@ import { CgProfile } from "react-icons/cg";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import Cart from "../pages/Cart/Cart";
 
 const HomeLayout = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
   const [showMenu, setShowMenu] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <>
@@ -69,12 +71,12 @@ const HomeLayout = ({ children }) => {
           </Link>
 
           {/* cart */}
-          <Link
-            to={"/cart"}
+          <button
+            onClick={() => setShowCart(!showCart)}
             className="flex items-center justify-center duration-200 max-sm:w-[10vw] max-md:w-[8vw] w-[5vw] h-[5vh] p-[1%] md:p-[2%] rounded-full shadow bg-[#242424]"
           >
             <FiShoppingCart className="text-white lg:size-5 md:size-4 sm:size-3" />
-          </Link>
+          </button>
         </div>
       </div>
       {/* header ends here  */}
@@ -104,6 +106,9 @@ const HomeLayout = ({ children }) => {
 
       {/* showing mobile menu */}
       {showMenu && <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} />}
+
+      {/* showing cart */}
+      {showCart && <Cart showCart={showCart} setShowCart={setShowCart} />}
     </>
   );
 };
