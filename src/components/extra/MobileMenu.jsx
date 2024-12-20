@@ -10,6 +10,8 @@ import { CgProfile } from "react-icons/cg";
 import { FiFacebook, FiInstagram, FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { PiTiktokLogoLight } from "react-icons/pi";
+import { SlSocialYoutube } from "react-icons/sl";
 
 const MobileMenu = ({ showMenu, setShowMenu }) => {
   return (
@@ -76,30 +78,44 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
         </div>
 
         {/* social icons  */}
-        <div className="mt-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
+        <div className="my-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
           <Link
             to={"/"}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
-            <FiFacebook className="text-[#242424] size-6" />
+            <FiFacebook className="text-[#242424] size-5" />
           </Link>
           <Link
             to={"/"}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
-            <FiInstagram className="text-[#242424] size-6" />
+            <FiInstagram className="text-[#242424] size-5" />
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => setShowMenu(false)}
+            className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
+          >
+            <PiTiktokLogoLight className="text-[#242424] size-5" />
+          </Link>
+          <Link
+            to={"/"}
+            onClick={() => setShowMenu(false)}
+            className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
+          >
+            <SlSocialYoutube className="text-[#242424] size-5" />
           </Link>
         </div>
 
         {/* phone number */}
-        <button className="flex font-semibold space-x-1 text-xs items-center duration-200 justify-center w-full h-auto rounded-full bg-[#fffdfd]">
+        <button className="flex font-semibold space-x-1 text-[.7rem] items-center duration-200 justify-center w-full h-auto rounded-full bg-[#fffdfd]">
           <span>{phoneNumber}</span>
         </button>
 
         {/* email */}
-        <button className="flex font-semibold space-x-1 text-xs items-center duration-200 justify-center w-full h-auto rounded-full bg-[#fffdfd]">
+        <button className="flex font-semibold space-x-1 text-[.7rem] items-center duration-200 justify-center w-full h-auto rounded-full bg-[#fffdfd]">
           <span>{vintageEmail}</span>
           {/* <MdOutlineEmail className="text-[#242424] size-4 font-semibold" /> */}
         </button>
