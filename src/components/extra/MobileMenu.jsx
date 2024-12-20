@@ -12,6 +12,7 @@ import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { PiTiktokLogo } from "react-icons/pi";
 import { TbBrandYoutube } from "react-icons/tb";
+import { RiTiktokLine } from "react-icons/ri";
 
 const MobileMenu = ({ showMenu, setShowMenu }) => {
   return (
@@ -98,7 +99,7 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
-            <PiTiktokLogo className="text-[#242424] size-5" />
+            <RiTiktokLine className="text-[#242424] size-5" />
           </Link>
           <Link
             to={"/"}
