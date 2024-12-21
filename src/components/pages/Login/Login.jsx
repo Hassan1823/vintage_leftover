@@ -35,9 +35,9 @@ const Login = () => {
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
-                <FaRegEyeSlash className="text-[#242424] size-5 duration-500" />
-              ) : (
                 <FaRegEye className="text-[#242424] size-5 duration-500" />
+              ) : (
+                <FaRegEyeSlash className="text-[#242424] size-5 duration-500" />
               )}
             </button>
           </div>
