@@ -39,7 +39,11 @@ const Product = () => {
                     <img
                       src={product}
                       alt="product img"
-                      className="object-cover w-full h-full duration-100 rounded-md hover:duration-500 hover:object-contain"
+                      className={` w-full h-full duration-100 rounded-md hover:duration-500 ${
+                        selectedImg === product
+                          ? "object-contain "
+                          : " object-cover"
+                      }`}
                     />
                   </button>
                 );
