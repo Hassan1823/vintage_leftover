@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
       </div>
       {/* copyright container */}
-      <div className="flex flex-col items-center justify-center w-full h-auto max-sm:text-[0.8rem] text-xs font-semibold capitalize flex-nowrap text-nowrap whitespace-nowrap">
+      <div className="flex flex-col items-center justify-center w-full h-auto max-sm:text-[0.7rem] text-xs font-semibold capitalize flex-nowrap text-nowrap whitespace-nowrap">
         <span>{`© 2024 Vintage Leftover. All Rights Reserved.`}</span>
       </div>
     </div>
