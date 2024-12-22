@@ -4,6 +4,7 @@ import MetaTags from "./components/extra/MetaTags";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Product from "./pages/Product/Product";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/profile" element={<Home />} />
 
         {/* product view */}
-        <Route path="/product" element={<Home />} />
+        <Route path="/product" element={<Product />} />
 
         {/* auth routes */}
         <Route path="/login" element={<Login />} />

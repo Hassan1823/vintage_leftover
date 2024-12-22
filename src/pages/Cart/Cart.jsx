@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
-import { productsData } from "../../lib/data";
+import { productsData } from "../../components/lib/data";
 import CartProduct from "./CartProduct";
 
 const Cart = ({ showCart, setShowCart }) => {

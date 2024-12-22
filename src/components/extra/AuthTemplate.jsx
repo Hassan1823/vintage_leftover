@@ -1,13 +1,7 @@
 import React from "react";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import {
-  facebook,
-  instagram,
-  phoneNumber,
-  tiktok,
-  youtube,
-} from "../../lib/data";
+import { facebook, instagram, phoneNumber, tiktok, youtube } from "../lib/data";
 import { TbBrandYoutube } from "react-icons/tb";
 import { RiTiktokLine } from "react-icons/ri";
 const AuthTemplate = ({ children }) => {

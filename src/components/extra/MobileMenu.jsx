@@ -11,7 +11,7 @@ import {
   tiktok,
   vintageEmail,
   youtube,
-} from "../../lib/data";
+} from "../lib/data";
 
 // * lib imports
 import { CgProfile } from "react-icons/cg";

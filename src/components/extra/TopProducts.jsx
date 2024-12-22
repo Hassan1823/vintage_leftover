@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ProductCard from "./ProductCard";
-import { productsData } from "../../lib/data";
+import { productsData } from "../lib/data";
 
 const TopProducts = () => {
   const [activeCat, setActiveCat] = useState("All");
@@ -46,7 +46,7 @@ const TopProducts = () => {
       {/* products */}
       <div className="flex flex-wrap gap-[4vw] items-center w-full h-auto duration-500 justify-center py-[2vh]">
         {productsData?.map((product, idx) => {
-          return <ProductCard key={idx} data={product} />;
+          return <ProductCard key={idx} data={product} id={idx} />;
         })}
       </div>
 

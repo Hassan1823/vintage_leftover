@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // * local imports
-import { menuList } from "../../lib/data";
+import { menuList } from "../lib/data";
 import MobileMenu from "./MobileMenu";
 
 //* lib imports
@@ -15,7 +15,6 @@ import Cart from "../../pages/Cart/Cart";
 import Footer from "./Footer";
 
 const HomeLayout = ({ children }) => {
-  const [searchInput, setSearchInput] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
@@ -80,28 +79,10 @@ const HomeLayout = ({ children }) => {
           </button>
         </div>
       </div>
-      {/* header ends here  */}
-      <div className="flex duration-200 items-center justify-center w-full px-[1%] h-auto bg-transparent py-[2%] max-md:py-[3%]">
-        {/* <h1 className="text-xs font-bold text-[#242424] ">Vintage Leftover</h1> */}
-
-        {/* search header */}
-        <div className="flex items-center justify-center w-auto h-auto duration-200 ">
-          <input
-            type="search"
-            name="productSearch"
-            id="productSearch"
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Search ..."
-            className="py-1 duration-200 px-4 max-md:px-2 border max-md:text-xs text-sm rounded-md outline-none focus:outline-none active:outline-none bg-transparent min-w-[20vw] max-md:w-[50vw] "
-          />
-          <button className="ml-[2%] py-1 duration-200 px-3 max-md:px-2 rounded-md bg-[#242424] border-black border max-md:text-xs text-sm font-semibold text-white">
-            Search
-          </button>
-        </div>
-      </div>
       {/* here come the children */}
-      <div className="p-[1%] md:p-[.8%] lg:p-[.5%]">{children}</div>
+      <div className="p-[1%] md:p-[.8%] lg:p-[.5%] min-h-[50vh]">
+        {children}
+      </div>
       {/* Footer */}
       <Footer />
       {/* showing mobile menu */}

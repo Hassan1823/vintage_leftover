@@ -113,3 +113,11 @@ export const productsData = [
     newPrice: 999,
   },
 ];
+
+//* product images grid
+export const productImages = [
+  "/shirt2.jpg",
+  "/shirt3.jpg",
+  "/shirt4.jpg",
+  "/shirt5.jpg",
+];
