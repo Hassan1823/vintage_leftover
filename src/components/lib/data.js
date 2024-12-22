@@ -121,3 +121,16 @@ export const productImages = [
   "/shirt4.jpg",
   "/shirt5.jpg",
 ];
+
+// * product sizes
+// export const productSizes = ["xs", "s", "m", "l", "xl"];
+export const productSizes = [
+  { size: "xs", active: true },
+  { size: "s", active: true },
+  { size: "m", active: true },
+  { size: "l", active: true },
+  { size: "xl", active: true },
+  { size: "2xl", active: false },
+  { size: "3xl", active: false },
+  { size: "4xl", active: false },
+];
