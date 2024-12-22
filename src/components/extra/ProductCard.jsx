@@ -16,9 +16,12 @@ const ProductCard = ({ data, id }) => {
           className="w-full h-full rounded "
         />
       </Link>
-      <h1 className="flex flex-wrap items-center justify-center w-full px-1 text-sm font-semibold text-center capitalize max-sm:text-xs">
+      <Link
+        to={`/product?id=${id}`}
+        className="flex flex-wrap items-center justify-center w-full px-1 text-sm font-semibold text-center capitalize max-sm:text-xs"
+      >
         {`polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`}
-      </h1>
+      </Link>
 
       {/* price container */}
       <div className="flex items-center rounded-md border border-[#242424] w-full h-auto max-sm:text-xs text-sm justify-evenly">

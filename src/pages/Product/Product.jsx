@@ -80,14 +80,48 @@ const Product = () => {
               </div>
             </div>
 
-            {/* product details  */}
-            <div className="w-[25%] max-md:w-[90%] h-full flex flex-col justify-start items-center gap-[1vh]">
-              {/* select size */}
+            {/* ------------------------------------------------------ */}
 
-              <h1 className="flex items-center justify-start w-full h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
-                {`size `} <p className="uppercase">{` : ${productSize}`}</p>
-              </h1>
-              <div className="flex flex-wrap items-center w-full h-auto justify-normal max-md:gap-[2vw] gap-[1vw]">
+            {/* product details  */}
+            <div className="w-[25%] max-md:w-[90%] duration-500 h-full flex flex-col justify-start items-center gap-y-[1vh] gap-x-[1vw]">
+              {/* ----------------------------------------- */}
+              {/* product price  */}
+              <div className="flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
+                <h1 className="flex items-center duration-500 justify-start w-full h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
+                  Price:
+                </h1>
+
+                {/* save button */}
+                <button className="rounded-md max-md:px-[2vw] px-[1vw] py-[.5vh] text-sm font-medium w-auto h-auto flex justify-center items-center flex-nowrap text-nowrap animate-pulse duration-200 whitespace-nowrap bg-orange-500 text-white border border-orange-500 max-md:min-w-[25vw] min-w-[8vw]">
+                  Save 70%
+                </button>
+              </div>
+              <div className="flex flex-nowrap duration-500 items-center justify-evenly w-full h-auto gap-[5vw] border rounded-md px-[5vw]">
+                <h1 className="text-[.8rem] font-medium line-through duration-500 text-nowrap whitespace-nowrap">
+                  Rs 2999
+                </h1>
+                <h1 className="text-[1.2rem] font-semibold duration-500 text-nowrap whitespace-nowrap ">
+                  Rs 999
+                </h1>
+              </div>
+
+              {/* ------------------------------------------------------- */}
+
+              {/* select size */}
+              <div className="mt-[1vh] flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
+                <h1 className="flex items-center duration-500 justify-start w-auto h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
+                  {`size `} <p className="uppercase">{` : ${productSize}`}</p>
+                </h1>
+
+                {/* size guide button */}
+
+                <button className="rounded-md max-md:px-[2vw] px-[1vw] py-[.5vh] text-sm font-medium w-auto h-auto flex justify-center items-center flex-nowrap text-nowrap duration-200 whitespace-nowrap bg-orange-500 text-white border border-orange-500 min-w-[8vw] max-md:min-w-[25vw]">
+                  Size Guide
+                </button>
+              </div>
+
+              {/* size buttons */}
+              <div className="flex flex-wrap duration-500 items-center w-full h-auto justify-normal max-md:gap-[2vw] gap-x-[1vw] gap-y-[1vh]">
                 {productSizes?.map((product, idx) => {
                   return (
                     <button
@@ -107,6 +141,8 @@ const Product = () => {
                   );
                 })}
               </div>
+
+              {/* --------------------------------------------------------- */}
             </div>
           </div>
         </div>
