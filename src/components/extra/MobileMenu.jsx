@@ -3,16 +3,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // * local imports
-import { menuList, phoneNumber, vintageEmail } from "../../lib/data";
+import {
+  facebook,
+  instagram,
+  menuList,
+  phoneNumber,
+  tiktok,
+  vintageEmail,
+  youtube,
+} from "../../lib/data";
 
 // * lib imports
 import { CgProfile } from "react-icons/cg";
 import { FiFacebook, FiInstagram, FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { PiTiktokLogo } from "react-icons/pi";
-import { TbBrandYoutube } from "react-icons/tb";
 import { RiTiktokLine } from "react-icons/ri";
+import { TbBrandYoutube } from "react-icons/tb";
 
 const MobileMenu = ({ showMenu, setShowMenu }) => {
   return (
@@ -81,28 +88,28 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
         {/* social icons  */}
         <div className="my-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
           <Link
-            to={"/"}
+            to={facebook}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <FiFacebook className="text-[#242424] size-5" />
           </Link>
           <Link
-            to={"/"}
+            to={instagram}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <FiInstagram className="text-[#242424] size-5" />
           </Link>
           <Link
-            to={"/"}
+            to={tiktok}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <RiTiktokLine className="text-[#242424] size-5" />
           </Link>
           <Link
-            to={"/"}
+            to={youtube}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >

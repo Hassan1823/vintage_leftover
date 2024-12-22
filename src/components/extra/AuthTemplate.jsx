@@ -1,8 +1,15 @@
 import React from "react";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { phoneNumber } from "../../lib/data";
-
+import {
+  facebook,
+  instagram,
+  phoneNumber,
+  tiktok,
+  youtube,
+} from "../../lib/data";
+import { TbBrandYoutube } from "react-icons/tb";
+import { RiTiktokLine } from "react-icons/ri";
 const AuthTemplate = ({ children }) => {
   return (
     <div className="flex flex-col duration-500 gap-2 items-center justify-center w-full h-[100vh]">
@@ -28,16 +35,28 @@ const AuthTemplate = ({ children }) => {
         {/* social icons */}
         <div className="flex items-center justify-center w-auto h-auto gap-1 duration-500">
           <Link
-            to={"/"}
+            to={facebook}
             className="flex items-center duration-500 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <FiFacebook className="text-[#242424] duration-500 size-5" />
           </Link>
           <Link
-            to={"/"}
+            to={instagram}
             className="flex items-center duration-500 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <FiInstagram className="text-[#242424] duration-500 size-5" />
+          </Link>
+          <Link
+            to={tiktok}
+            className="flex items-center duration-500 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
+          >
+            <RiTiktokLine className="text-[#242424] size-5" />
+          </Link>
+          <Link
+            to={youtube}
+            className="flex items-center duration-500 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
+          >
+            <TbBrandYoutube className="text-[#242424] size-5" />
           </Link>
         </div>
       </div>

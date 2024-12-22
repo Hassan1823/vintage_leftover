@@ -12,6 +12,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import Cart from "../pages/Cart/Cart";
+import Footer from "./Footer";
 
 const HomeLayout = ({ children }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -80,7 +81,6 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
       {/* header ends here  */}
-
       <div className="flex duration-200 items-center justify-center w-full px-[1%] h-auto bg-transparent shadow-md pb-[1%] max-md:pb-[2%]">
         {/* <h1 className="text-xs font-bold text-[#242424] ">Vintage Leftover</h1> */}
 
@@ -100,13 +100,12 @@ const HomeLayout = ({ children }) => {
           </button>
         </div>
       </div>
-
       {/* here come the children */}
       <div className="p-[1%] md:p-[.8%] lg:p-[.5%]">{children}</div>
-
+      {/* Footer */}
+      <Footer />
       {/* showing mobile menu */}
       {showMenu && <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} />}
-
       {/* showing cart */}
       {showCart && <Cart showCart={showCart} setShowCart={setShowCart} />}
     </>

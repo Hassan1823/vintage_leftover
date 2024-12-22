@@ -4,6 +4,18 @@ export const phoneNumber = "+92 3085504450";
 // * email
 export const vintageEmail = "vintageleftover@gmail.com";
 
+// * facebook
+export const facebook = "/";
+
+// * instagram
+export const instagram = "/";
+
+// * tiktok
+export const tiktok = "/";
+
+// * youtube
+export const youtube = "/";
+
 // * menu list
 export const menuList = [
   {
