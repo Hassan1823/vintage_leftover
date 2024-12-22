@@ -87,13 +87,13 @@ const Product = () => {
               <h1 className="flex items-center justify-start w-full h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
                 {`size `} <p className="uppercase">{` : ${productSize}`}</p>
               </h1>
-              <div className="flex flex-wrap items-center w-full h-auto justify-normal gap-[1vw]">
+              <div className="flex flex-wrap items-center w-full h-auto justify-normal max-md:gap-[2vw] gap-[1vw]">
                 {productSizes?.map((product, idx) => {
                   return (
                     <button
                       key={idx}
                       onClick={() => setProductSize(product.size)}
-                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal px-[2vw] py-[1vh] duration-500  rounded h-auto w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
+                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal max-md:px-[3vw] px-[2vw] py-[1vh] duration-500  rounded h-auto w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
                         productSize === product.size &&
                         "bg-slate-400 bg-opacity-30"
                       } ${
