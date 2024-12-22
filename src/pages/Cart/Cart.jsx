@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
-import { CiCircleMinus } from "react-icons/ci";
-import { CiCirclePlus } from "react-icons/ci";
-import { AiTwotoneDelete } from "react-icons/ai";
-import { productsData } from "../../../lib/data";
+import { productsData } from "../../lib/data";
 import CartProduct from "./CartProduct";
 
 const Cart = ({ showCart, setShowCart }) => {

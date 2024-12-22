@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import MetaTags from "./components/extra/MetaTags";
-import Home from "./components/pages/Home/Home";
-import Login from "./components/pages/Login/Login";
-import Register from "./components/pages/Register/Register";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -24,6 +24,9 @@ function App() {
         <Route path="/about" element={<Home />} />
         <Route path="/cart" element={<Home />} />
         <Route path="/profile" element={<Home />} />
+
+        {/* product view */}
+        <Route path="/product" element={<Home />} />
 
         {/* auth routes */}
         <Route path="/login" element={<Login />} />

@@ -11,7 +11,7 @@ import { CgProfile } from "react-icons/cg";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import Cart from "../pages/Cart/Cart";
+import Cart from "../../pages/Cart/Cart";
 import Footer from "./Footer";
 
 const HomeLayout = ({ children }) => {
@@ -22,7 +22,7 @@ const HomeLayout = ({ children }) => {
   return (
     <>
       {/* header starts here  */}
-      <div className="flex items-center justify-between w-full h-auto max-md:px-[3vw] px-[1%] md:pt-[0.2%] max-md:py-[1%] text-center bg-transparent duration-200">
+      <div className="flex items-center justify-between w-full h-auto max-md:px-[3vw] px-[1%] md:pt-[0.2%] max-md:py-[1%] text-center bg-transparent duration-200 shadow-md">
         {/* menu button */}
         <button
           onClick={() => setShowMenu(!showMenu)}
@@ -81,7 +81,7 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
       {/* header ends here  */}
-      <div className="flex duration-200 items-center justify-center w-full px-[1%] h-auto bg-transparent shadow-md pb-[1%] max-md:pb-[2%]">
+      <div className="flex duration-200 items-center justify-center w-full px-[1%] h-auto bg-transparent py-[2%] max-md:py-[3%]">
         {/* <h1 className="text-xs font-bold text-[#242424] ">Vintage Leftover</h1> */}
 
         {/* search header */}

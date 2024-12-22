@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AuthTemplate from "../../extra/AuthTemplate";
+import AuthTemplate from "../../components/extra/AuthTemplate";
 import { Link } from "react-router-dom";
 
 import { FaRegEyeSlash } from "react-icons/fa";

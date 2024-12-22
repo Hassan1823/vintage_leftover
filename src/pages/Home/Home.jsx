@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BannerImage from "../../extra/BannerImage";
-import HomeLayout from "../../extra/HomeLayout";
-import TopProducts from "../../extra/TopProducts";
-import Banner from "../../extra/Banner";
+import BannerImage from "../../components/extra/BannerImage";
+import HomeLayout from "../../components/extra/HomeLayout";
+import TopProducts from "../../components/extra/TopProducts";
+import Banner from "../../components/extra/Banner";
 
 const Home = () => {
   const [customBanner, setCustomBanner] = useState(false);
