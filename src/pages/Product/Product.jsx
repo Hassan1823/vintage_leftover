@@ -30,13 +30,15 @@ const Product = () => {
             {/* product images */}
             <div className="flex flex-row flex-nowrap max-md:flex-col-reverse items-center duration-500 justify-center w-auto max-md:w-full max-md:h-auto h-[60vh] max-md:gap-[2vh] gap-[2vw]">
               {/* images grid  */}
-              <div className="w-[8vw] max-md:w-[90%] h-full flex duration-500 flex-col max-md:flex-row flex-none justify-evenly items-center gap-[1vh]">
+              <div className="w-[10vw] max-md:w-[90%] h-full flex duration-500 flex-col max-md:flex-row flex-none justify-evenly items-center gap-[1vh]">
                 {productImages?.map((product, idx) => {
                   //   grid image container or box
                   return (
                     <button
                       key={idx}
-                      className="w-full h-[23%] max-md:h-[12vh] shadow-md duration-100 hover:scale-[102%] border rounded-md flex justify-center items-center hover:duration-300"
+                      className={`${
+                        selectedImg === product ? "border-[2px] " : "border"
+                      } w-full h-[23%] max-md:h-[12vh] shadow-md duration-100 hover:scale-[102%]  rounded-md flex justify-center items-center hover:duration-300`}
                       onClick={() => setSelectedImg(product)}
                     >
                       <img
