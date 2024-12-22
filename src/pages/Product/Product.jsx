@@ -57,7 +57,7 @@ const Product = () => {
 
               {/* main product image container */}
               <div
-                className="w-[40vw] max-md:w-[95%] bg-[#000000]/80 h-full max-md:h-[30vh] duration-500 shadow-md rounded-md border flex justify-center items-center relative cursor-pointer"
+                className="w-[40vw] max-md:w-[95%] bg-[#000000]/60 h-full max-md:h-[30vh] duration-500 shadow-md rounded-md border flex justify-center items-center relative cursor-pointer"
                 onClick={() => setZoomIn(!zoomIn)}
               >
                 <img
@@ -93,7 +93,7 @@ const Product = () => {
                     <button
                       key={idx}
                       onClick={() => setProductSize(product.size)}
-                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal max-md:px-[3vw] px-[2vw] py-[1vh] duration-500  rounded h-auto w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
+                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal max-md:px-[3vw] px-[2vw] py-[1vh] duration-500  rounded h-auto max-sm:min-w-[15vw] max-md:min-w-[10vw] w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
                         productSize === product.size &&
                         "bg-slate-400 bg-opacity-30"
                       } ${
