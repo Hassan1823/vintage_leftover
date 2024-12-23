@@ -40,7 +40,7 @@ const SizeGuide = ({ setShowGuide }) => {
                 return (
                   <th
                     key={idx}
-                    className="border rounded-s p-[1%] max-md:p-[1.4%] font-semibold duration-500"
+                    className="border p-[1%] max-md:p-[1.4%] font-semibold duration-500"
                   >
                     {type}
                   </th>
