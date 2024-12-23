@@ -10,7 +10,7 @@ const SizeGuide = ({ setShowGuide }) => {
   return (
     <div
       className="fixed top-0 flex justify-center items-center left-0 w-full h-screen bg-[#000000]/80 duration-500 max-md:p-[5%] p-[3%] gap-0"
-      // onClick={() => setShowGuide(false)}
+      onClick={() => setShowGuide(false)}
     >
       {/* main container for the sze guide  */}
       <div className="w-[95%] md:w-[80%] lg:w-[65%] xl:w-1/2 h-[70vh] overflow-auto flex flex-col justify-start items-center rounded-md bg-white text-[#242424] py-[5vh] px-[4vw] duration-500 relative">
