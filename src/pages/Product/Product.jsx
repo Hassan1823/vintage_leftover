@@ -6,8 +6,12 @@ import HomeLayout from "../../components/extra/HomeLayout";
 import { productImages, productSizes } from "../../components/lib/data";
 
 // * lip imports
-import { MdOutlineZoomOutMap } from "react-icons/md";
+import { MdClose, MdOutlineZoomOutMap } from "react-icons/md";
 import { MdZoomInMap } from "react-icons/md";
+import { CiCircleMinus } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
+import ZoomInOut from "./ZoomInOut";
+import SizeGuide from "./SizeGuide";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -15,7 +19,21 @@ const Product = () => {
   );
 
   const [zoomIn, setZoomIn] = useState(false);
+  const [showGuide, setShowGuide] = useState(false);
   const [productSize, setProductSize] = useState("xs");
+  const [itemQuantity, setItemQuantity] = useState(1);
+
+  const handleIncrement = () => {
+    if (itemQuantity > 0) {
+      setItemQuantity(itemQuantity + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (itemQuantity > 1) {
+      setItemQuantity(itemQuantity - 1);
+    }
+  };
 
   return (
     <div>
@@ -115,7 +133,10 @@ const Product = () => {
 
                 {/* size guide button */}
 
-                <button className="rounded-md max-md:px-[2vw] px-[1vw] py-[.5vh] text-sm font-medium w-auto h-auto flex justify-center items-center flex-nowrap text-nowrap duration-200 whitespace-nowrap bg-orange-500 text-white border border-orange-500 min-w-[8vw] max-md:min-w-[25vw]">
+                <button
+                  onClick={() => setShowGuide(!showGuide)}
+                  className="rounded-md max-md:px-[2vw] px-[1vw] py-[.5vh] text-sm font-medium w-auto h-auto flex justify-center items-center flex-nowrap text-nowrap duration-200 whitespace-nowrap bg-orange-500 text-white border border-orange-500 min-w-[8vw] max-md:min-w-[25vw]"
+                >
                   Size Guide
                 </button>
               </div>
@@ -143,35 +164,41 @@ const Product = () => {
               </div>
 
               {/* --------------------------------------------------------- */}
+
+              {/* select quantity */}
+              <div className="mt-[1vh] flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
+                <h1 className="flex items-center duration-500 justify-start w-full h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
+                  Quantity:
+                </h1>
+
+                {/* quantity */}
+                <div className="flex border rounded-md max-md:px-[3vw] px-[.5vw] py-[1vh] items-center justify-between w-auto h-auto gap-[1vw]">
+                  <button onClick={handleDecrement}>
+                    <CiCircleMinus className="size-4 lg:size-5 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                  </button>
+                  <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[10px] md:text-xs">
+                    {itemQuantity || 0}
+                  </span>
+                  <button onClick={handleIncrement}>
+                    <CiCirclePlus className="size-4 lg:size-5 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* view the image in full screen */}
         {zoomIn && (
-          <div
-            className="fixed top-0 flex flex-col justify-center items-center left-0 w-full h-screen bg-[#000000]/80 duration-500 max-md:p-[5%] p-[3%] gap-0"
-            onClick={() => setZoomIn(!zoomIn)}
-          >
-            <div className="flex justify-end w-full h-auto duration-300">
-              <button
-                className="text-white duration-300 "
-                onClick={() => setZoomIn(!zoomIn)}
-              >
-                {zoomIn ? (
-                  <MdZoomInMap className="duration-300 size-6" />
-                ) : (
-                  <MdOutlineZoomOutMap className="duration-300 size-6" />
-                )}
-              </button>
-            </div>
-            <img
-              src={selectedImg || `/shirt2.jpg`}
-              alt="product img"
-              className="object-contain w-full h-full duration-500 rounded-md shadow-md "
-            />
-          </div>
+          <ZoomInOut
+            zoomIn={zoomIn}
+            setZoomIn={setZoomIn}
+            selectedImg={selectedImg}
+          />
         )}
+
+        {/* showing guide modal */}
+        {showGuide && <SizeGuide setShowGuide={setShowGuide} />}
       </HomeLayout>
     </div>
   );

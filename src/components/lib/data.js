@@ -134,3 +134,69 @@ export const productSizes = [
   { size: "3xl", active: false },
   { size: "4xl", active: false },
 ];
+
+// * type of measurements
+export const measurementTypes = ["size", "chest", "length", "sleeve", "scale"];
+
+//* size chat
+export const sizeChart = [
+  {
+    size: "s",
+    chest: 20,
+    length: 27,
+    sleeve: 24,
+    measurementIn: "inches",
+  },
+  {
+    size: "m",
+    chest: 21.5,
+    length: 27.5,
+    sleeve: 24.5,
+    measurementIn: "inches",
+  },
+  {
+    size: "l",
+    chest: 23,
+    length: 28.5,
+    sleeve: 25,
+    measurementIn: "inches",
+  },
+  {
+    size: "xl",
+    chest: 24.5,
+    length: 29.5,
+    sleeve: 25.5,
+    measurementIn: "inches",
+  },
+  {
+    size: "2xl",
+    chest: 26,
+    length: 30,
+    sleeve: 26,
+    measurementIn: "inches",
+  },
+];
+
+// * how to measure
+export const howToMeasure = [
+  {
+    label: "chest",
+    tip: "Measure around the fullest part of the chest, keeping the tape level and parallel to the ground.",
+  },
+  {
+    label: "length",
+    tip: "Measure from the highest point of the shoulder seam to the bottom of the garment.",
+  },
+  {
+    label: "sleeve",
+    tip: "Measure from the shoulder joint seam down to the edge of the cuff.",
+  },
+  // {
+  //   label: "waist",
+  //   tip: "Measure around the natural waistline where you normally wear your pants.",
+  // },
+  // {
+  //   label: "Inseam",
+  //   tip: "Measure from the top of the inner thigh down to your desired pant length (usually to the ankle).",
+  // },
+];
