@@ -191,12 +191,12 @@ export const howToMeasure = [
     label: "sleeve",
     tip: "Measure from the shoulder joint seam down to the edge of the cuff.",
   },
-  // {
-  //   label: "waist",
-  //   tip: "Measure around the natural waistline where you normally wear your pants.",
-  // },
-  // {
-  //   label: "Inseam",
-  //   tip: "Measure from the top of the inner thigh down to your desired pant length (usually to the ankle).",
-  // },
+  {
+    label: "waist",
+    tip: "Measure around the natural waistline where you normally wear your pants.",
+  },
+  {
+    label: "Inseam",
+    tip: "Measure from the top of the inner thigh down to your desired pant length (usually to the ankle).",
+  },
 ];
