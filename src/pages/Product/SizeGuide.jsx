@@ -35,7 +35,7 @@ const SizeGuide = ({ setShowGuide }) => {
         {/* table */}
         <table className="w-full max-w-full h-auto rounded-md p-[1%] border-2 border-[#242424]/40">
           <thead className="font-semibold capitalize ">
-            <tr className="bg-slate-500/20 text-[1rem] max-md:text-[0.6rem]">
+            <tr className="bg-slate-500/20 text-[1rem] max-md:text-[0.8rem] max-sm:text-[0.6rem]">
               {measurementTypes?.map((type, idx) => {
                 return (
                   <th
@@ -48,7 +48,7 @@ const SizeGuide = ({ setShowGuide }) => {
               })}
             </tr>
           </thead>
-          <tbody className="text-[1rem] my-[1vh] max-md:text-[0.6rem] font-normal capitalize">
+          <tbody className="text-[1rem] my-[1vh] max-md:text-[0.8rem] max-sm:text-[0.6rem] font-normal capitalize">
             {sizeChart?.map((data, idx) => {
               return (
                 <tr key={idx} className="my-[1vh] even:bg-slate-500/20">
