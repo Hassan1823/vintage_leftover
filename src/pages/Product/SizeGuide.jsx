@@ -13,7 +13,7 @@ const SizeGuide = ({ setShowGuide }) => {
       // onClick={() => setShowGuide(false)}
     >
       {/* main container for the sze guide  */}
-      <div className="w-[95%] md:w-[80%] lg:w-[65%] xl:w-1/2 h-[70vh] overflow-auto flex flex-col justify-start items-center rounded-md bg-white text-[#242424] py-[5vh] px-[4vh] duration-500 relative">
+      <div className="w-[95%] md:w-[80%] lg:w-[65%] xl:w-1/2 h-[70vh] overflow-auto flex flex-col justify-start items-center rounded-md bg-white text-[#242424] py-[5vh] px-[4vw] duration-500 relative">
         {/* close button */}
         <div className="absolute duration-300 top-2 right-2">
           <button
@@ -24,7 +24,7 @@ const SizeGuide = ({ setShowGuide }) => {
           </button>
         </div>
 
-        <h1 className="text-[1.1rem] max-sm:text-[0.8rem] font-semibold duration-500 capitalize max-sm:w-[80%] text-center w-[70%] h-auto">{`polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`}</h1>
+        <h1 className="text-[1.1rem] max-md:text-[1rem] max-sm:text-[0.9rem] font-semibold duration-500 capitalize max-sm:w-[80%] text-center w-[70%] h-auto">{`polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`}</h1>
 
         {/* under line for the product name  */}
         <div className="w-full h-auto border-b-2 my-[2vh] duration-500"></div>
@@ -33,7 +33,7 @@ const SizeGuide = ({ setShowGuide }) => {
         {/* size table starts here  */}
         <h1 className="text-[.8rem] mb-[1vh] max-sm:text-[0.6rem] font-semibold animate-pulse duration-500 capitalize max-sm:w-[80%] text-center w-[70%] h-auto">{`Not all products have the same measurements.`}</h1>
         {/* table */}
-        <table className="w-full max-w-full h-auto rounded-md p-[1%] border-2  border-[#242424]/40">
+        <table className="w-full max-w-full h-auto rounded-md p-[1%] border-2 border-[#242424]/40">
           <thead className="text-[1rem] max-md:text-[0.8rem] font-semibold capitalize">
             <tr className="bg-slate-500/20">
               {measurementTypes?.map((type, idx) => {
