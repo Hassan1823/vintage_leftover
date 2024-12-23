@@ -34,13 +34,13 @@ const SizeGuide = ({ setShowGuide }) => {
         <h1 className="text-[.8rem] mb-[1vh] max-sm:text-[0.6rem] font-semibold animate-pulse duration-500 capitalize max-sm:w-[80%] text-center w-[70%] h-auto">{`Not all products have the same measurements.`}</h1>
         {/* table */}
         <table className="w-full max-w-full h-auto rounded-md p-[1%] border-2 border-[#242424]/40">
-          <thead className="text-[1rem] max-md:text-[0.8rem] font-semibold capitalize">
-            <tr className="bg-slate-500/20">
+          <thead className="font-semibold capitalize ">
+            <tr className="bg-slate-500/20 text-[1rem] max-md:text-[0.6rem]">
               {measurementTypes?.map((type, idx) => {
                 return (
                   <th
                     key={idx}
-                    className="border rounded-s p-[1%] font-semibold duration-500"
+                    className="border rounded-s p-[1%] max-md:p-[1.4%] font-semibold duration-500"
                   >
                     {type}
                   </th>
@@ -48,23 +48,23 @@ const SizeGuide = ({ setShowGuide }) => {
               })}
             </tr>
           </thead>
-          <tbody className="text-[1rem] my-[1vh] max-md:text-[0.8rem] font-normal capitalize">
+          <tbody className="text-[1rem] my-[1vh] max-md:text-[0.6rem] font-normal capitalize">
             {sizeChart?.map((data, idx) => {
               return (
                 <tr key={idx} className="my-[1vh] even:bg-slate-500/20">
                   <th className="border uppercase rounded-s p-[1%] font-semibold duration-500">
                     {data.size}
                   </th>
-                  <th className="border p-[1%] font-normal duration-500">
+                  <th className="border p-[1%] max-md:p-[1.4%] font-normal duration-500">
                     {data.chest}
                   </th>
-                  <th className="border p-[1%] font-normal duration-500">
+                  <th className="border p-[1%] max-md:p-[1.4%] font-normal duration-500">
                     {data.length}
                   </th>
-                  <th className="border p-[1%] font-normal duration-500">
+                  <th className="border p-[1%] max-md:p-[1.4%] font-normal duration-500">
                     {data.sleeve}
                   </th>
-                  <th className="border p-[1%] font-semibold duration-500 text-[.8rem] max-md:text-[.6rem]">
+                  <th className="border p-[1%] max-md:p-[1.4%] font-semibold duration-500 text-[.8rem] max-md:text-[.6rem]">
                     {data.measurementIn}
                   </th>
                 </tr>
