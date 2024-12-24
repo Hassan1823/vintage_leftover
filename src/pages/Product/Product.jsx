@@ -184,7 +184,7 @@ const Product = () => {
                   <button onClick={handleDecrement}>
                     <CiCircleMinus className="size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
-                  <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[1.2rem] md:text-[1rem]">
+                  <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[1rem] max-md:text-[.9rem] max-sm-[.8rem]">
                     {itemQuantity || 0}
                   </span>
                   <button onClick={handleIncrement}>
