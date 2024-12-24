@@ -3,7 +3,11 @@ import React, { useState } from "react";
 
 // * local imports
 import HomeLayout from "../../components/extra/HomeLayout";
-import { productImages, productSizes } from "../../components/lib/data";
+import {
+  productColors,
+  productImages,
+  productSizes,
+} from "../../components/lib/data";
 
 // * lip imports
 import { MdClose, MdOutlineZoomOutMap } from "react-icons/md";
@@ -12,6 +16,7 @@ import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 import ZoomInOut from "./ZoomInOut";
 import SizeGuide from "./SizeGuide";
+import { TbRulerMeasure2 } from "react-icons/tb";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -20,7 +25,10 @@ const Product = () => {
 
   const [zoomIn, setZoomIn] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
-  const [productSize, setProductSize] = useState("xs");
+  const [productSize, setProductSize] = useState(productSizes[0].size || "xs");
+  const [productColor, setProductColor] = useState(
+    productColors[0].color || "Blue"
+  );
   const [itemQuantity, setItemQuantity] = useState(1);
 
   const handleIncrement = () => {
@@ -148,7 +156,7 @@ const Product = () => {
                     <button
                       key={idx}
                       onClick={() => setProductSize(product.size)}
-                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal max-md:px-[3vw] px-[2vw] py-[1vh] duration-500  rounded h-auto max-sm:min-w-[15vw] max-md:min-w-[10vw] w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
+                      className={`uppercase border text-sm max-md:text-[.8rem] font-normal max-md:px-[3vw] px-[1.5vw] py-[.5vh] duration-500  rounded h-auto max-sm:min-w-[15vw] max-md:min-w-[10vw] w-auto active:outline-none disabled:cursor-not-allowed focus:outline-none ${
                         productSize === product.size &&
                         "bg-slate-400 bg-opacity-30"
                       } ${
@@ -172,18 +180,55 @@ const Product = () => {
                 </h1>
 
                 {/* quantity */}
-                <div className="flex border rounded-md max-md:px-[3vw] px-[.5vw] py-[1vh] items-center justify-between w-auto h-auto gap-[1vw]">
+                <div className="flex border-2 rounded-md max-md:px-[5vw] px-[.5vw] py-[1vh] items-center justify-between max-md:w-[70vw] w-[20vw] h-auto gap-[1vw]">
                   <button onClick={handleDecrement}>
-                    <CiCircleMinus className="size-4 lg:size-5 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                    <CiCircleMinus className="max-md:size-7 size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
-                  <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[10px] md:text-xs">
+                  <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[1.2rem] md:text-[1rem]">
                     {itemQuantity || 0}
                   </span>
                   <button onClick={handleIncrement}>
-                    <CiCirclePlus className="size-4 lg:size-5 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                    <CiCirclePlus className="max-md:size-7 size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
                 </div>
               </div>
+
+              {/* --------------------------------------------------------- */}
+              {/* select the product color */}
+              <div className="mt-[1vh] flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
+                <h1 className="flex items-center duration-500 justify-start w-auto h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
+                  {`Color `} <p className="uppercase">{` : ${productColor}`}</p>
+                </h1>
+              </div>
+
+              {/* product colors */}
+              <div className="flex flex-wrap duration-500 items-center w-full h-auto justify-normal max-md:gap-[2vw] gap-x-[1vw] gap-y-[1vh]">
+                {productColors
+                  ?.filter((product) => product.active)
+                  .map((product, idx) => {
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => setProductColor(product.color)} // Set the selected color
+                        className={`relative rounded-full max-md:h-7 max-md:w-7 h-[5vh] w-[5vh] duration-500 active:outline-none focus:outline-none ${
+                          productColor === product.color
+                            ? "border-black/70 border-2"
+                            : "border-slate-500/70 border-[1px]"
+                        }`}
+                      >
+                        <div
+                          className="absolute inset-0 rounded-full m-[2px] hover:m-[1px] duration-500"
+                          style={{
+                            backgroundColor: product.color, // Set background color based on product.color (hex or name)
+                            opacity: 1, // Full opacity since these are active colors
+                          }}
+                        />
+                      </button>
+                    );
+                  })}
+              </div>
+
+              {/* --------------------------------------------------------- */}
             </div>
           </div>
         </div>

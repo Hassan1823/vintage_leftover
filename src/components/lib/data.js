@@ -135,6 +135,18 @@ export const productSizes = [
   { size: "4xl", active: false },
 ];
 
+// * product colors
+export const productColors = [
+  { color: "blue", active: true },
+  { color: "#242424", active: true },
+  { color: "white", active: true },
+  { color: "red", active: true },
+  { color: "orange", active: true },
+  { color: "green", active: false },
+  { color: "yellow", active: false },
+  { color: "brown", active: false },
+];
+
 // * type of measurements
 export const measurementTypes = ["size", "chest", "length", "sleeve", "scale"];
 
