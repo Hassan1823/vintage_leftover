@@ -180,15 +180,15 @@ const Product = () => {
                 </h1>
 
                 {/* quantity */}
-                <div className="flex border-2 rounded-md max-md:px-[5vw] px-[.5vw] py-[1vh] items-center justify-between max-md:w-[70vw] w-[20vw] h-auto gap-[1vw]">
+                <div className="flex border-2 rounded-md max-md:px-[3vw] px-[.5vw] py-[.5vh] items-center justify-between max-md:w-[50vw] w-[20vw] h-auto gap-[1vw]">
                   <button onClick={handleDecrement}>
-                    <CiCircleMinus className="max-md:size-7 size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                    <CiCircleMinus className="size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
                   <span className="px-[.8vw] md:px-[0.5vw] font-semibold text-[1.2rem] md:text-[1rem]">
                     {itemQuantity || 0}
                   </span>
                   <button onClick={handleIncrement}>
-                    <CiCirclePlus className="max-md:size-7 size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
+                    <CiCirclePlus className="size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
                 </div>
               </div>
