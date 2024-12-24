@@ -180,7 +180,7 @@ const Product = () => {
                 </h1>
 
                 {/* quantity */}
-                <div className="flex border-2 rounded-md max-md:px-[3vw] px-[.5vw] py-[.5vh] items-center justify-between max-md:w-[50vw] w-[20vw] h-auto gap-[1vw]">
+                <div className="flex border-2 rounded-md max-sm:px-[5vw] max-md:px-[3vw] px-[.5vw] py-[.5vh] items-center justify-between max-md:w-[50vw] w-[20vw] h-auto gap-[1vw]">
                   <button onClick={handleDecrement}>
                     <CiCircleMinus className="size-6 active:bg-[#242424] active:text-white rounded-full duration-500" />
                   </button>
