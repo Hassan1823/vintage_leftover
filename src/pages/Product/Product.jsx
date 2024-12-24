@@ -122,7 +122,7 @@ const Product = () => {
                   Save 70%
                 </button>
               </div>
-              <div className="flex flex-nowrap duration-500 items-center justify-evenly w-full h-auto gap-[5vw] border rounded-md px-[5vw]">
+              <div className="flex mb-[1vh] flex-nowrap duration-500 items-center justify-evenly w-full h-auto gap-[5vw] border rounded-md px-[5vw]">
                 <h1 className="text-[.8rem] font-medium line-through duration-500 text-nowrap whitespace-nowrap">
                   Rs 2999
                 </h1>
@@ -150,7 +150,7 @@ const Product = () => {
               </div>
 
               {/* size buttons */}
-              <div className="flex flex-wrap duration-500 items-center w-full h-auto justify-normal max-md:gap-[2vw] gap-x-[1vw] gap-y-[1vh]">
+              <div className="flex flex-wrap duration-500 items-center w-full h-auto justify-normal max-md:gap-[2vw] mb-[1vh] gap-x-[1vw] gap-y-[1vh]">
                 {productSizes?.map((product, idx) => {
                   return (
                     <button
@@ -174,7 +174,7 @@ const Product = () => {
               {/* --------------------------------------------------------- */}
 
               {/* select quantity */}
-              <div className="mt-[1vh] flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
+              <div className="my-[1vh] flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
                 <h1 className="flex items-center duration-500 justify-start w-full h-auto text-sm max-md:text-[.8rem] font-semibold capitalize">
                   Quantity:
                 </h1>
