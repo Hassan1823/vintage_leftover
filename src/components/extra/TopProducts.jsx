@@ -14,7 +14,7 @@ const TopProducts = () => {
 
       {showCategory && (
         <div className="flex items-center justify-center w-full h-auto">
-          <div className="w-auto max-w-[90%] h-auto overflow-x-auto flex max-lg:justify-start justify-start items-center gap-[4vw] hide-scrollbar ">
+          <div className="w-auto max-sm:max-w-[92%] max-w-[90%]  h-auto overflow-x-auto flex max-lg:justify-start justify-start items-center gap-[4vw] hide-scrollbar ">
             {categories?.map((category, idx) => {
               return <CategoryButton key={idx} data={category} />;
             })}
