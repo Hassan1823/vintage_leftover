@@ -11,7 +11,7 @@ const CategoryButton = ({ data }) => {
         className={`relative rounded-full max-md:min-h-[7vh] max-md:min-w-[7vh] min-h-[9vh] min-w-[9vh] duration-500 shadow-md active:outline-none focus:outline-none }`}
       >
         <div
-          className="absolute inset-0 rounded-full m-[2px] hover:m-[1px] duration-500"
+          className="absolute inset-0 rounded-full m-[1px] hover:m-[1px] duration-500"
           style={{
             // backgroundColor: product.color, // Set background color based on product.color (hex or name)
             opacity: 1, // Full opacity since these are active colors
