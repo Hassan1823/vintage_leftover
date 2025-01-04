@@ -18,7 +18,7 @@ const Footer = () => {
     <div className="w-full flex-col flex-nowrap min-h-[20vh] h-auto bg-[#242424] text-white flex justify-center items-center duration-500 max-sm:py-[3vh] py-[5vh] gap-[5vh]">
       <div className="flex items-center justify-center w-full h-auto gap-[15vw]">
         {/* menu section */}
-        <div className="w-auto max-w-[20vw] h-auto duration-500 gap-y-[1vh] gap-x-[2vw] flex justify-center items-center flex-wrap">
+        <div className="max-md:hidden w-auto max-w-[20vw] h-auto duration-500 gap-y-[1vh] gap-x-[2vw] flex justify-center items-center flex-wrap">
           {menuList?.map((item, idx) => {
             return (
               <Link

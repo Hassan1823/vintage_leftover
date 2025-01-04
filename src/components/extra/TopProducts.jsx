@@ -44,7 +44,7 @@ const TopProducts = () => {
       )}
 
       {/* products */}
-      <div className="flex flex-wrap gap-[4vw] items-center w-full h-auto duration-500 justify-center py-[2vh]">
+      <div className="flex flex-wrap gap-x-[1vw] gap-y-[2vh] items-center w-full h-auto duration-500 justify-evenly py-[2vh]">
         {productsData?.map((product, idx) => {
           return <ProductCard key={idx} data={product} id={idx} />;
         })}

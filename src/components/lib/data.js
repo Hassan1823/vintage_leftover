@@ -114,6 +114,40 @@ export const productsData = [
   },
 ];
 
+// * suggested products data
+export const suggestedProductsData = [
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt2.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt3.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt4.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt5.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+  {
+    title: `polo republica Men's Essentials Pony Embroidered Button-Down Casual Shirt`,
+    productImg: "/shirt2.jpg",
+    oldPrice: 2699,
+    newPrice: 999,
+  },
+];
+
 //* product images grid
 export const productImages = [
   "/shirt2.jpg",
@@ -137,14 +171,14 @@ export const productSizes = [
 
 // * product colors
 export const productColors = [
-  { color: "blue", active: true },
-  { color: "#242424", active: true },
-  { color: "white", active: true },
-  { color: "red", active: true },
-  { color: "orange", active: true },
-  { color: "green", active: false },
-  { color: "yellow", active: false },
-  { color: "brown", active: false },
+  { color: "blue", productImg: "/shirt5.jpg", active: true },
+  { color: "#242424", productImg: "/shirt4.jpg", active: true },
+  { color: "white", productImg: "/shirt3.jpg", active: true },
+  { color: "red", productImg: "/shirt2.jpg", active: true },
+  { color: "orange", productImg: "/shirt5.jpg", active: true },
+  { color: "green", productImg: "/shirt4.jpg", active: false },
+  { color: "yellow", productImg: "/shirt3.jpg", active: false },
+  { color: "brown", productImg: "/shirt2.jpg", active: false },
 ];
 
 // * type of measurements
@@ -210,5 +244,29 @@ export const howToMeasure = [
   {
     label: "Inseam",
     tip: "Measure from the top of the inner thigh down to your desired pant length (usually to the ankle).",
+  },
+];
+
+// * product details
+export const productDetails = [
+  {
+    title: "Elegant Texture",
+    desc: "The texture & logo embroidery enhances the gilet’s visual appeal for a sophisticated look.",
+  },
+  {
+    title: "Full-Zip Closure",
+    desc: "Convenient front zipper for easy wear and adjustable ventilation.",
+  },
+  {
+    title: "Side Pockets",
+    desc: "Functional and discreet, perfect for keeping hands warm or storing small essentials.",
+  },
+  {
+    title: "Versatile Layering",
+    desc: "Perfect for casual outings, workwear, or outdoor activities in cooler weather.",
+  },
+  {
+    title: "Premium Fabric",
+    desc: "Blended Cotton Jacquard Double Knit for luxurious comfort, warmth, and durability.",
   },
 ];

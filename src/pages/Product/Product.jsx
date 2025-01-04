@@ -5,18 +5,24 @@ import React, { useState } from "react";
 import HomeLayout from "../../components/extra/HomeLayout";
 import {
   productColors,
+  productDetails,
   productImages,
   productSizes,
 } from "../../components/lib/data";
+import SizeGuide from "./SizeGuide";
+import ZoomInOut from "./ZoomInOut";
+import SuggestedProducts from "./SuggestedProducts";
 
 // * lip imports
-import { MdClose, MdOutlineZoomOutMap } from "react-icons/md";
-import { MdZoomInMap } from "react-icons/md";
-import { CiCircleMinus } from "react-icons/ci";
-import { CiCirclePlus } from "react-icons/ci";
-import ZoomInOut from "./ZoomInOut";
-import SizeGuide from "./SizeGuide";
-import { TbRulerMeasure2 } from "react-icons/tb";
+import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
+import { IoCartOutline } from "react-icons/io5";
+import {
+  MdOutlineFavorite,
+  MdOutlineFavoriteBorder,
+  MdOutlineZoomOutMap,
+  MdZoomInMap,
+} from "react-icons/md";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -25,6 +31,8 @@ const Product = () => {
 
   const [zoomIn, setZoomIn] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
+  const [addSample, setAddSample] = useState(false);
+  const [openDetails, setOpenDetails] = useState(false);
   const [productSize, setProductSize] = useState(productSizes[0].size || "xs");
   const [productColor, setProductColor] = useState(
     productColors[0].color || "Blue"
@@ -110,6 +118,25 @@ const Product = () => {
 
             {/* product details  */}
             <div className="w-[25%] max-md:w-[90%] duration-500 h-full flex flex-col justify-start items-center gap-y-[1vh] gap-x-[1vw]">
+              {/* add to sample product list */}
+              {/* <div className="flex mb-[1vh] flex-nowrap duration-500 items-center justify-center w-full h-auto gap-[5vw] border rounded-md py-[1vh] px-[1vw]">
+                <button
+                  onClick={() => setAddSample(!addSample)}
+                  className="border-none active:outline-none focus:outline-none text-[0.8rem] font-semibold flex justify-center capitalize items-center flex-nowrap gap-[1vw] duration-500"
+                >
+                  {addSample
+                    ? "Remove product from list :"
+                    : "Add product to list :"}
+                  <span className="duration-500">
+                    {addSample ? (
+                      <MdOutlineFavorite className="text-orange-500 duration-500 size-5" />
+                    ) : (
+                      <MdOutlineFavoriteBorder className="text-orange-500 duration-500 size-5" />
+                    )}
+                  </span>
+                </button>
+              </div> */}
+
               {/* ----------------------------------------- */}
               {/* product price  */}
               <div className="flex items-center justify-between w-full h-auto duration-500 flex-nowrap">
@@ -210,19 +237,25 @@ const Product = () => {
                       <button
                         key={idx}
                         onClick={() => setProductColor(product.color)} // Set the selected color
-                        className={`relative rounded-full max-md:h-7 max-md:w-7 h-[5vh] w-[5vh] duration-500 active:outline-none focus:outline-none ${
-                          productColor === product.color
-                            ? "border-black/70 border-2"
-                            : "border-slate-500/70 border-[1px]"
+                        className={`relative rounded-full max-md:h-[7vh] max-md:w-[7vh] h-[7vh] w-[7vh] duration-500 active:outline-none focus:outline-none ${
+                          productColor === product.color &&
+                          "border-black/70 border-2"
+                          // : "border-slate-500/70 border-[1px]"
                         }`}
                       >
                         <div
                           className="absolute inset-0 rounded-full m-[2px] hover:m-[1px] duration-500"
                           style={{
-                            backgroundColor: product.color, // Set background color based on product.color (hex or name)
+                            // backgroundColor: product.color, // Set background color based on product.color (hex or name)
                             opacity: 1, // Full opacity since these are active colors
                           }}
-                        />
+                        >
+                          <img
+                            src={product.productImg}
+                            alt="product img"
+                            className="object-contain w-full h-full border rounded-full"
+                          />
+                        </div>
                       </button>
                     );
                   })}
@@ -230,6 +263,84 @@ const Product = () => {
 
               {/* --------------------------------------------------------- */}
             </div>
+
+            {/* --------------------------------------------------------- */}
+          </div>
+
+          {/* product description */}
+          <div className="w-full h-auto duration-500 flex flex-col text-center justify-center items-center gap-[2vh] py-[2vh] max-md:px-[5vw] px-[8vw]">
+            <button
+              onClick={() => setOpenDetails(!openDetails)}
+              className="w-full h-auto flex flex-nowrap justify-start items-center gap-[1vw] max-md:text-[1rem] text-[1.2rem] font-semibold duration-500 border-none"
+            >
+              Product Details{" "}
+              <span className="duration-500">
+                {openDetails ? (
+                  <IoMdArrowDropup className="duration-500 size-6" />
+                ) : (
+                  <IoMdArrowDropdown className="duration-500 size-6" />
+                )}
+              </span>
+            </button>
+
+            {/* show and hide product detatils */}
+            {openDetails && (
+              <div className="flex flex-col text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500">
+                {productDetails?.map((product, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      className="flex flex-col items-start justify-start w-full h-auto text-[#242424]"
+                    >
+                      <li className="text-[1.1rem] max-md:text-[.9rem] font-semibold">
+                        {product?.title}
+                      </li>
+                      <p className="text-[1.1rem] max-md:text-[.9rem] font-light">
+                        {product?.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+          {/* --------------------------------------------------------- */}
+
+          {/* suggested products */}
+          <div className="flex items-center justify-center w-full h-auto max-md:px-[0vw] px-[5vw]">
+            <SuggestedProducts />
+          </div>
+
+          {/* --------------------------------------------------------- */}
+
+          {/* add to cart footer */}
+          <div className="fixed bottom-0 left-0 w-full h-auto shadow-xl bg-[#ffffff] text-[#242424] flex justify-between items-center flex-nowrap">
+            {/* add to favorite button  */}
+            <button
+              onClick={() => setAddSample(!addSample)}
+              className="w-1/2 h-auto border-t-[2px] border-inherit active:outline-none focus:outline-none text-[0.8rem] font-semibold flex justify-center capitalize items-center flex-nowrap gap-[1vw] duration-500 max-md:py-[2%] max-lg:py-[1%] py-[.6%]"
+            >
+              <span className="duration-500">
+                {addSample ? (
+                  <MdOutlineFavorite className="text-orange-500 duration-500 size-8" />
+                ) : (
+                  <MdOutlineFavoriteBorder className="text-orange-500 duration-500 size-8" />
+                )}
+              </span>
+            </button>
+            {/* add to cart button  */}
+            <button
+              // onClick={() => setAddSample(!addSample)}
+              className="w-1/2 h-auto border-t-[2px] border-orange-500 active:outline-none focus:outline-none text-[0.8rem] font-semibold bg-orange-500 flex justify-center capitalize items-center flex-nowrap gap-[1vw] duration-500 max-md:py-[2%] max-lg:py-[1%] py-[.6%]"
+            >
+              <span className="duration-500">
+                {/* {addSample ? (
+                  <IoCart className="text-white duration-500 size-8" />
+                ) : ( */}
+                <IoCartOutline className="text-white duration-500 size-8" />
+                {/* )} */}
+              </span>
+            </button>
           </div>
         </div>
 
