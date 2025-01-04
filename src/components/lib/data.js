@@ -181,6 +181,18 @@ export const productColors = [
   { color: "brown", productImg: "/shirt2.jpg", active: false },
 ];
 
+// * category buttons
+export const categories = [
+  { name: "male", productImg: "/shirt5.jpg", active: true },
+  { name: "female", productImg: "/female_fashion.jpeg", active: true },
+  { name: "baggy", productImg: "/baggy.jpg", active: false },
+  { name: "top", productImg: "/top.jpeg", active: true },
+  { name: "bottom", productImg: "/bottom.jpg", active: true },
+  { name: "trousers", productImg: "/trouser.jpeg", active: true },
+  { name: "shirts", productImg: "/shirts.jpeg", active: false },
+  { name: "polo", productImg: "/polo.jpg", active: false },
+];
+
 // * type of measurements
 export const measurementTypes = ["size", "chest", "length", "sleeve", "scale"];
 

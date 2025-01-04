@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 import ProductCard from "./ProductCard";
-import { productsData } from "../lib/data";
+import { categories, productsData } from "../lib/data";
+import { Link } from "react-router-dom";
+import CategoryButton from "./CategoryButton";
 
 const TopProducts = () => {
   const [activeCat, setActiveCat] = useState("All");
@@ -11,36 +13,43 @@ const TopProducts = () => {
       {/* category list buttons */}
 
       {showCategory && (
-        <div className="flex items-center justify-center w-auto h-auto text-sm duration-500 border rounded-md max-md:text-xs">
-          <button
-            onClick={() => setActiveCat("All")}
-            className={`${
-              activeCat !== "Men" && "border-r"
-            } px-2 py-1 duration-500 rounded-s ${
-              activeCat === "All" && "bg-slate-400 rounded bg-opacity-30"
-            }  max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
-          >
-            All
-          </button>
-          <button
-            onClick={() => setActiveCat("Men")}
-            className={`
-            ${activeCat !== "Women" && "border-r"}
-       px-2 py-1 duration-500 rounded-s ${
-         activeCat === "Men" && "bg-slate-400 rounded bg-opacity-30"
-       } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
-          >
-            Men
-          </button>
-          <button
-            onClick={() => setActiveCat("Women")}
-            className={`px-2 py-1 duration-500 rounded-s ${
-              activeCat === "Women" && "bg-slate-400 rounded bg-opacity-30"
-            } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
-          >
-            Women
-          </button>
+        <div className="flex items-center justify-center w-full h-auto">
+          <div className="w-auto max-w-[90%] h-auto overflow-x-auto flex max-lg:justify-start justify-start items-center gap-[4vw] hide-scrollbar ">
+            {categories?.map((category, idx) => {
+              return <CategoryButton key={idx} data={category} />;
+            })}
+          </div>
         </div>
+        //   <div className="flex items-center justify-center w-auto h-auto text-sm duration-500 border rounded-md max-md:text-xs">
+        //     <button
+        //       onClick={() => setActiveCat("All")}
+        //       className={`${
+        //         activeCat !== "Men" && "border-r"
+        //       } px-2 py-1 duration-500 rounded-s ${
+        //         activeCat === "All" && "bg-slate-400 rounded bg-opacity-30"
+        //       }  max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
+        //     >
+        //       All
+        //     </button>
+        //     <button
+        //       onClick={() => setActiveCat("Men")}
+        //       className={`
+        //       ${activeCat !== "Women" && "border-r"}
+        //  px-2 py-1 duration-500 rounded-s ${
+        //    activeCat === "Men" && "bg-slate-400 rounded bg-opacity-30"
+        //  } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
+        //     >
+        //       Men
+        //     </button>
+        //     <button
+        //       onClick={() => setActiveCat("Women")}
+        //       className={`px-2 py-1 duration-500 rounded-s ${
+        //         activeCat === "Women" && "bg-slate-400 rounded bg-opacity-30"
+        //       } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none`}
+        //     >
+        //       Women
+        //     </button>
+        //   </div>
       )}
 
       {/* products */}

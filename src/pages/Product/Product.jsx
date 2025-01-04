@@ -13,6 +13,7 @@ import {
 import SizeGuide from "./SizeGuide";
 import ZoomInOut from "./ZoomInOut";
 import SuggestedProducts from "./SuggestedProducts";
+import ReviewCard from "../../components/extra/ReviewCard";
 
 // * lip imports
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
@@ -24,7 +25,6 @@ import {
   MdZoomInMap,
 } from "react-icons/md";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import ReviewCard from "../../components/extra/ReviewCard";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -333,21 +333,6 @@ const Product = () => {
                 {reviewData?.map((review, idx) => {
                   return <ReviewCard key={idx} data={review} />;
                 })}
-                {/* {productDetails?.map((product, idx) => {
-                  return (
-                    <div
-                      key={idx}
-                      className="flex flex-col items-start justify-start w-full h-auto text-[#242424]"
-                    >
-                      <li className="text-[1.1rem] max-md:text-[.9rem] font-semibold">
-                        {product?.title}
-                      </li>
-                      <p className="text-[1.1rem] max-md:text-[.9rem] font-light">
-                        {product?.desc}
-                      </p>
-                    </div>
-                  );
-                })} */}
               </div>
             )}
           </div>
