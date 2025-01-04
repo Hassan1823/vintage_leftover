@@ -8,6 +8,7 @@ import {
   productDetails,
   productImages,
   productSizes,
+  reviewData,
 } from "../../components/lib/data";
 import SizeGuide from "./SizeGuide";
 import ZoomInOut from "./ZoomInOut";
@@ -23,6 +24,7 @@ import {
   MdZoomInMap,
 } from "react-icons/md";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import ReviewCard from "../../components/extra/ReviewCard";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(
@@ -33,6 +35,7 @@ const Product = () => {
   const [showGuide, setShowGuide] = useState(false);
   const [addSample, setAddSample] = useState(false);
   const [openDetails, setOpenDetails] = useState(false);
+  const [openReviews, setOpenReviews] = useState(true);
   const [productSize, setProductSize] = useState(productSizes[0].size || "xs");
   const [productColor, setProductColor] = useState(
     productColors[0].color || "Blue"
@@ -301,6 +304,50 @@ const Product = () => {
                     </div>
                   );
                 })}
+              </div>
+            )}
+          </div>
+
+          {/* --------------------------------------------------------- */}
+
+          {/* product reviews */}
+          <div className="w-full h-auto duration-500 flex flex-col justify-center items-start gap-[2vh] py-[2vh] max-md:px-[5vw] px-[8vw] capitalize">
+            <button
+              onClick={() => setOpenReviews(!openReviews)}
+              className="w-full h-auto flex flex-nowrap justify-start items-center gap-[1vw] max-md:text-[1rem] text-[1.2rem] font-semibold capitalize duration-500 border-none"
+            >
+              reviews{" "}
+              <span className="duration-500">
+                {openReviews ? (
+                  <IoMdArrowDropup className="duration-500 size-6" />
+                ) : (
+                  <IoMdArrowDropdown className="duration-500 size-6" />
+                )}
+              </span>
+            </button>
+
+            {/* show and hide product reviews */}
+            {openReviews && (
+              <div className="flex flex-nowrap overflow-x-auto text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500 pb-[2vh]">
+                {/* review card here */}
+                {reviewData?.map((review, idx) => {
+                  return <ReviewCard key={idx} data={review} />;
+                })}
+                {/* {productDetails?.map((product, idx) => {
+                  return (
+                    <div
+                      key={idx}
+                      className="flex flex-col items-start justify-start w-full h-auto text-[#242424]"
+                    >
+                      <li className="text-[1.1rem] max-md:text-[.9rem] font-semibold">
+                        {product?.title}
+                      </li>
+                      <p className="text-[1.1rem] max-md:text-[.9rem] font-light">
+                        {product?.desc}
+                      </p>
+                    </div>
+                  );
+                })} */}
               </div>
             )}
           </div>

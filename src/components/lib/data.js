@@ -270,3 +270,68 @@ export const productDetails = [
     desc: "Blended Cotton Jacquard Double Knit for luxurious comfort, warmth, and durability.",
   },
 ];
+
+// * review data for the products
+export const reviewData = [
+  {
+    name: "Alice Johnson",
+    gender: "female",
+    rating: 5,
+    review:
+      "Absolutely love this product! Exceeded my expectations in every way.",
+  },
+  {
+    name: "Bob Smith",
+    gender: "male",
+    rating: 2,
+    review: "Not very satisfied. The product did not work as advertised.",
+  },
+  {
+    name: "Charlie Brown",
+    gender: "male",
+    rating: 4,
+    review: "Great product overall, but there's room for improvement.",
+  },
+  {
+    name: "Diana Prince",
+    gender: "female",
+    rating: 3,
+    review: "It's okay. Does the job but nothing spectacular.",
+  },
+  {
+    name: "Eve Adams",
+    gender: "female",
+    rating: 1,
+    review: "Very disappointed. Would not recommend to others.",
+  },
+  {
+    name: "Frank Miller",
+    gender: "male",
+    rating: 5,
+    review: "Fantastic! Will definitely buy again.",
+  },
+  {
+    name: "Grace Lee",
+    gender: "female",
+    rating: 4,
+    review: "Good quality and fast shipping. Happy with my purchase.",
+  },
+  {
+    name: "Henry Ford",
+    gender: "male",
+    rating: 3,
+    review: "Average product. Nothing special but not bad either.",
+  },
+  {
+    name: "Isabella Garcia",
+    gender: "female",
+    rating: 2,
+    review: "Expected more from this product. It didn't meet my needs.",
+  },
+  {
+    name: "Jack Wilson",
+    gender: "male",
+    rating: 5,
+    review: "Excellent product! Highly recommend to everyone.",
+  },
+];
