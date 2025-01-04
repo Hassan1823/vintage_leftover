@@ -20,7 +20,7 @@ const CategoryButton = ({ data }) => {
           <img
             src={data.productImg}
             alt="product img"
-            className="object-contain w-full h-full border rounded-full"
+            className="object-contain w-full h-full rounded-full"
           />
         </div>
       </div>
