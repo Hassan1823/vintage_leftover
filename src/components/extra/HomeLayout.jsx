@@ -73,9 +73,13 @@ const HomeLayout = ({ children }) => {
           {/* cart */}
           <button
             onClick={() => setShowCart(!showCart)}
-            className="flex items-center justify-center duration-200 max-sm:w-[10vw] max-md:w-[8vw] w-[5vw] h-[5vh] p-[1%] md:p-[2%] rounded-full shadow bg-[#242424]"
+            className="flex items-center justify-center duration-200 max-sm:w-[10vw] max-md:w-[8vw] w-[5vw] h-[5vh] p-[1%] md:p-[2%] rounded-full shadow bg-[#242424] relative"
           >
             <FiShoppingCart className="text-white lg:size-5 md:size-4 sm:size-3" />
+
+            <div className="absolute max-md:-top-2 -top-3 max-md:h-4 max-md:w-4 h-5 w-5 right-0 bg-orange-500 border-orange-500 p-1 max-md:text-[.4rem] text-[.5rem] font-semibold rounded-full text-white">
+              6
+            </div>
           </button>
         </div>
       </div>
