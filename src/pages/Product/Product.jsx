@@ -240,7 +240,7 @@ const Product = () => {
                       <button
                         key={idx}
                         onClick={() => setProductColor(product.color)} // Set the selected color
-                        className={`relative rounded-full max-md:h-[7vh] max-md:w-[7vh] h-[7vh] w-[7vh] duration-500 active:outline-none focus:outline-none ${
+                        className={`relative rounded-full max-md:min-h-[7vh] max-md:min-w-[7vh] min-h-[7vh] min-w-[7vh] duration-500 active:outline-none focus:outline-none ${
                           productColor === product.color &&
                           "border-black/70 border-2"
                           // : "border-slate-500/70 border-[1px]"
@@ -328,7 +328,7 @@ const Product = () => {
 
             {/* show and hide product reviews */}
             {openReviews && (
-              <div className="flex flex-nowrap overflow-x-auto text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500 pb-[2vh]">
+              <div className="flex flex-nowrap overflow-x-auto text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500 pb-[2vh] hide-scrollbar">
                 {/* review card here */}
                 {reviewData?.map((review, idx) => {
                   return <ReviewCard key={idx} data={review} />;

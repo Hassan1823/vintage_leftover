@@ -54,7 +54,7 @@ const Home = () => {
 
           {/* show and hide product reviews */}
           {openReviews && (
-            <div className="flex flex-nowrap overflow-x-auto text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500 pb-[2vh]">
+            <div className="flex flex-nowrap overflow-x-auto text-start items-start gap-[2vh] justify-start w-full h-auto capitalize duration-500 pb-[2vh] hide-scrollbar">
               {/* review card here */}
               {reviewData?.map((review, idx) => {
                 return <ReviewCard key={idx} data={review} />;

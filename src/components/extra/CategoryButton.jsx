@@ -8,7 +8,7 @@ const CategoryButton = ({ data }) => {
       className="flex flex-col items-center justify-center w-auto h-auto"
     >
       <div
-        className={`relative rounded-full max-md:min-h-[7vh] max-md:min-w-[7vh] min-h-[9vh] min-w-[9vh] duration-500 shadow-md active:outline-none focus:outline-none }`}
+        className={`relative rounded-full max-md:min-h-[7vh] max-md:min-w-[7vh] max-md:max-h-[7vh] max-md:max-w-[7vh] min-h-[9vh] min-w-[9vh] max-h-[9vh] max-w-[9vh] duration-500 shadow-md active:outline-none focus:outline-none }`}
       >
         <div
           className="absolute inset-0 rounded-full m-[1px] hover:m-[1px] duration-500"
