@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 // const productImg = "/shirt2.jpg";
 
 import { FiShoppingCart } from "react-icons/fi";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdOutlineFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ data, id }) => {
+  const [addSample, setAddSample] = useState(false);
   return (
     <div className="w-[15vw] max-sm:w-[45vw] max-md:w-[25vw] max-lg:w-[20vw] gap-y-[2%] max-sm:h-[45vh] max-md:h-[50vh] h-[60vh] border-[0.5px] rounded flex flex-col justify-between items-center hover:shadow-md hover:scale-[101%] cursor-default p-[0.3%] duration-300 max-md:mt-[1vh] mt-0">
       <Link to={`/product?id=${id}`} className="w-full h-[55%]">
@@ -30,8 +31,21 @@ const ProductCard = ({ data, id }) => {
       </div>
 
       {/* bottom container */}
-      <div className="w-full h-auto flex justify-between px-[1vw] items-center  rounded-md">
-        <button className="flex items-center duration-200 justify-center w-auto h-auto p-[2%]  bg-[#fffdfd] space-x-1 ">
+      <div className="w-full h-auto flex justify-center items-center rounded-md">
+        <button
+          onClick={() => setAddSample(!addSample)}
+          className="w-1/2 h-auto flex justify-center items-center py-[2%] bg-white"
+        >
+          {addSample ? (
+            <MdOutlineFavorite className="text-orange-500 duration-500 size-5" />
+          ) : (
+            <MdOutlineFavoriteBorder className="text-orange-500 duration-500 size-5" />
+          )}
+        </button>
+        <button className="w-1/2 h-auto flex justify-center items-center py-[2%] bg-[#242424] rounded-full">
+          <FiShoppingCart className="text-[#ffffff] max-sm:size-4 size-5" />
+        </button>
+        {/* <button className="flex items-center duration-200 justify-center w-auto h-auto p-[2%]  bg-[#fffdfd] space-x-1 ">
           <span className="text-[0.6rem] font-semibold capitalize text-nowrap whitespace-nowrap">
             Add to samples
           </span>
@@ -39,7 +53,7 @@ const ProductCard = ({ data, id }) => {
         </button>
         <button className="rounded-full bg-[#242424] border-[#242424] flex items-center duration-200 justify-center w-auto h-auto p-[.5vw] max-sm:p-[1vw]">
           <FiShoppingCart className="text-[#ffffff] max-sm:size-4 size-5" />
-        </button>
+        </button> */}
       </div>
     </div>
   );
