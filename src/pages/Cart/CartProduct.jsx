@@ -17,7 +17,7 @@ const CartProduct = ({ data }) => {
     }
   };
   return (
-    <div className="flex flex-nowrap flex-row items-center justify-evenly w-[90%] h-[15vh] md:h-[18vh] lg:h-[20vh] rounded-md shadow-md border py-2 mb-[2vh]">
+    <div className="flex flex-nowrap flex-row items-center justify-evenly w-[95%] h-[15vh] md:h-[18vh] lg:h-[20vh] rounded-md shadow-md border py-2 mb-[2vh]">
       {/* product image */}
       <div className="w-[15%] h-full rounded-md">
         <img
