@@ -183,8 +183,8 @@ export const productColors = [
 
 // * category buttons
 export const categories = [
-  { name: "male", productImg: "/shirt5.jpg", active: true },
-  { name: "female", productImg: "/female_fashion.jpeg", active: true },
+  { name: "men", productImg: "/shirt5.jpg", active: true },
+  { name: "women", productImg: "/female_fashion.jpeg", active: true },
   { name: "baggy", productImg: "/baggy.jpg", active: false },
   { name: "top", productImg: "/top.jpeg", active: true },
   { name: "bottom", productImg: "/bottom.jpg", active: true },
