@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeLayout from "../../components/extra/HomeLayout";
 
-const Checkout = () => {
+const ConfirmOrder = () => {
   const [agreed, setAgreed] = useState(true);
   return (
     <div>
@@ -229,4 +229,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default ConfirmOrder;
