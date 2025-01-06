@@ -154,7 +154,7 @@ const Cart = ({ showCart, setShowCart }) => {
                   </div>
                 </div>
 
-                <div className="px-4 py-6 border-t border-gray-200 sm:px-6">
+                <div className="px-4 max-md:py-[1vh] py-[2vh] border-t border-gray-200 sm:px-6">
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <p>Subtotal</p>
                     <p>$262.00</p>
