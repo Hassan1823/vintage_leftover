@@ -43,8 +43,8 @@ const Cart = ({ showCart, setShowCart }) => {
               transition
               className="pointer-events-auto w-screen max-w-lg transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
             >
-              <div className="flex flex-col h-full overflow-y-scroll bg-white shadow-xl">
-                <div className="flex-1 px-4 py-6 overflow-y-auto sm:px-6">
+              <div className="flex flex-col h-full overflow-y-scroll bg-white shadow-xl hide-scrollbar">
+                <div className="flex-1 px-4 py-6 overflow-y-auto hide-scrollbar sm:px-6">
                   <div className="flex items-center justify-end">
                     {/* <DialogTitle className="text-lg font-medium text-gray-900">
                       Shopping cart
