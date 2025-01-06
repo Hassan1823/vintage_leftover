@@ -26,20 +26,20 @@ export const menuList = [
     icon: "HomeIcon",
     active: false,
   },
+  // {
+  //   label: "Men",
+  //   path: "/men",
+  //   icon: "HomeIcon",
+  //   active: false,
+  // },
+  // {
+  //   label: "Women",
+  //   path: "/women",
+  //   icon: "HomeIcon",
+  //   active: false,
+  // },
   {
-    label: "Men",
-    path: "/men",
-    icon: "HomeIcon",
-    active: false,
-  },
-  {
-    label: "Women",
-    path: "/women",
-    icon: "HomeIcon",
-    active: false,
-  },
-  {
-    label: "Sale",
+    label: "Clearance",
     path: "/sale",
     icon: "HomeIcon",
     active: false,
