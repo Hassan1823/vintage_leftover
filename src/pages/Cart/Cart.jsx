@@ -120,11 +120,11 @@ const Cart = ({ showCart, setShowCart }) => {
 
                             <div className="flex flex-col flex-1 ml-4">
                               <div>
-                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                <div className="flex justify-between text-base text-gray-900">
                                   <h5>
                                     <Link
                                       to={`/product?${product.title}`}
-                                      className="capitalize text-[.92rem]"
+                                      className="capitalize font-normal text-[.92rem]"
                                     >
                                       {product.title}
                                     </Link>
@@ -167,6 +167,7 @@ const Cart = ({ showCart, setShowCart }) => {
                   </p>
                   <div className="mt-6">
                     <Link
+                      onClick={() => setShowCart(false)}
                       to="/checkout"
                       className="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#242424] border border-transparent rounded-md shadow-sm hover:text-white hover:bg-[#242424]/90"
                     >

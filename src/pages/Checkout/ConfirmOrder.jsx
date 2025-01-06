@@ -2,6 +2,7 @@ import { Field, Label, Switch } from "@headlessui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeLayout from "../../components/extra/HomeLayout";
+import { placeholderNumber } from "../../components/lib/data";
 
 const ConfirmOrder = () => {
   const [agreed, setAgreed] = useState(true);
@@ -43,6 +44,7 @@ const ConfirmOrder = () => {
                       id="first-name"
                       name="first-name"
                       type="text"
+                      placeholder="Hassan"
                       autoComplete="given-name"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
                     />
@@ -62,6 +64,7 @@ const ConfirmOrder = () => {
                       id="last-name"
                       name="last-name"
                       type="text"
+                      placeholder="Zaib"
                       autoComplete="family-name"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
                     />
@@ -81,6 +84,7 @@ const ConfirmOrder = () => {
                       id="email"
                       name="email"
                       type="email"
+                      placeholder="vintageleftover@gmail.com"
                       autoComplete="email"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
                     />
@@ -111,7 +115,7 @@ const ConfirmOrder = () => {
                         name="phone-number"
                         type="tel"
                         pattern="^03\d{2} \d{7}$"
-                        placeholder="0300 1234567"
+                        placeholder={placeholderNumber}
                         className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                       />
                     </div>

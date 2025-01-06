@@ -52,13 +52,13 @@ const MobileMenu = ({ showMenu, setShowMenu }) => {
 
         {/* profile and cart */}
         <div className="my-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
-          <Link
+          {/* <Link
             to={"/login"}
             onClick={() => setShowMenu(false)}
             className="flex items-center duration-200 justify-center w-auto h-auto p-[2%] rounded-full bg-[#fffdfd]"
           >
             <CgProfile className="text-[#242424] size-6" />
-          </Link>
+          </Link> */}
           <Link
             to={"/cart"}
             onClick={() => setShowMenu(false)}

@@ -1,6 +1,8 @@
 // * phone number
 export const phoneNumber = "+92 3085504450";
 
+export const placeholderNumber = "03085504450";
+
 // * email
 export const vintageEmail = "vintageleftover@gmail.com";
 
