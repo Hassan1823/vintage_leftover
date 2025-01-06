@@ -84,9 +84,7 @@ const HomeLayout = ({ children }) => {
         </div>
       </div>
       {/* here come the children */}
-      <div className="p-[1%] md:p-[.8%] lg:p-[.5%] min-h-[50vh]">
-        {children}
-      </div>
+      <div className="p-[0%] md:p-[0%] lg:p-[0%] min-h-[50vh]">{children}</div>
       {/* Footer */}
       <Footer />
       {/* showing mobile menu */}

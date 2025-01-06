@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Product from "./pages/Product/Product";
+import Checkout from "./pages/Checkout/checkout";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -28,10 +30,14 @@ function App() {
 
         {/* product view */}
         <Route path="/product" element={<Product />} />
+        <Route path="/checkout" element={<Checkout />} />
 
         {/* auth routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        {/* page not found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
