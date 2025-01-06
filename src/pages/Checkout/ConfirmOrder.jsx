@@ -209,7 +209,7 @@ const ConfirmOrder = () => {
                     <Switch
                       checked={addSamples}
                       onChange={setAddSamples}
-                      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-orange-500/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500 data-[checked]:bg-orange-500"
+                      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-orange-500/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#242424] data-[checked]:bg-[#242424]"
                     >
                       <span className="sr-only">Add Samples</span>
                       <span
