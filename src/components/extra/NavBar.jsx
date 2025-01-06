@@ -76,14 +76,13 @@ const NavBar = ({ setShowCart, showCart }) => {
 
         {/* logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+          <Link to="/" className="-m-1.5 p-1.5">
             <img
               alt=""
               src="/logo.png"
               className="w-auto max-md:h-[8vh] h-[12vh]"
             />
-          </a>
+          </Link>
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
