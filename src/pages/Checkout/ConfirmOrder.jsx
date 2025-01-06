@@ -224,7 +224,7 @@ const ConfirmOrder = () => {
                   </Label>
                 </Field>
 
-                {/* coupon code */}
+                {/* coupon code  */}
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="coupon-code"
@@ -232,7 +232,7 @@ const ConfirmOrder = () => {
                   >
                     Coupon Code
                   </label>
-                  <div className="mt-1">
+                  <div className="flex mt-1">
                     <input
                       id="coupon-code"
                       name="coupon-code"
@@ -240,6 +240,12 @@ const ConfirmOrder = () => {
                       placeholder="Enter your coupon code"
                       className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
                     />
+                    <button
+                      type="button"
+                      className="ml-2 rounded-md bg-[#242424] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#242424]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#242424] capitalize"
+                    >
+                      Apply
+                    </button>
                   </div>
                 </div>
 
