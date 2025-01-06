@@ -71,14 +71,14 @@ const Cart = ({ showCart, setShowCart }) => {
                           activeCat !== "fav" && "border-r"
                         } px-2 py-1 duration-500 rounded-s ${
                           activeCat === "cart" && "bg-orange-500 rounded"
-                        }  max-md:min-w-[17vw] min-w-[10vw] w-auto active:border-orange-500 focus:border-orange-500 flex justify-center items-center`}
+                        }  max-md:min-w-[20vw] min-w-[10vw] w-auto h-full active:border-orange-500 focus:border-orange-500 flex justify-center items-center`}
                       >
                         <IoCartOutline
                           className={`${
                             activeCat === "cart"
                               ? "text-white"
                               : "text-orange-500"
-                          } duration-500 size-8`}
+                          } duration-500 max-md:size-5 size-8`}
                         />
                       </button>
 
@@ -86,14 +86,14 @@ const Cart = ({ showCart, setShowCart }) => {
                         onClick={() => setActiveCat("fav")}
                         className={`px-2 py-1 duration-500 rounded-s ${
                           activeCat === "fav" && "bg-orange-500 rounded"
-                        } max-md:min-w-[17vw] min-w-[10vw] w-auto active:outline-none focus:outline-none flex justify-center items-center border-none active:border-none`}
+                        } max-md:min-w-[20vw] min-w-[10vw] w-auto active:outline-none focus:outline-none flex justify-center items-center border-none active:border-none`}
                       >
                         <MdOutlineFavoriteBorder
                           className={`${
                             activeCat === "fav"
                               ? "text-white"
                               : "text-orange-500"
-                          } duration-500 size-8`}
+                          } duration-500 max-md:size-5 size-8`}
                         />
                       </button>
                     </div>
