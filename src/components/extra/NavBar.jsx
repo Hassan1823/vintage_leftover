@@ -367,7 +367,7 @@ const NavBar = ({ setShowCart, showCart }) => {
                 </div>
 
                 {/* social icons  */}
-                <div className="my-[3%] flex items-center justify-center w-full h-auto border border-black rounded-md">
+                <div className="my-[3vh] flex items-center justify-center w-full h-auto border border-black rounded-md">
                   <Link
                     to={facebook}
                     onClick={() => setMobileMenuOpen(false)}
@@ -426,14 +426,6 @@ const NavBar = ({ setShowCart, showCart }) => {
                 >
                   Company
                 </a> */}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>
