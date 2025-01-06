@@ -106,7 +106,10 @@ const Cart = ({ showCart, setShowCart }) => {
                         className="-my-6 divide-y divide-gray-200"
                       >
                         {productsData?.map((product) => (
-                          <li key={product.id} className="flex py-6">
+                          <li
+                            key={product.id}
+                            className="flex py-[2.5vh] max-md:py-[2vh]"
+                          >
                             <div className="overflow-hidden border border-gray-200 rounded-md size-24 shrink-0">
                               <img
                                 alt={product.title}
