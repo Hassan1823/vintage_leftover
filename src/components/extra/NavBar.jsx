@@ -60,7 +60,7 @@ const NavBar = ({ setShowCart, showCart }) => {
     <header className="bg-white border-b shadow-sm">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8"
+        className="flex items-center justify-between py-[1vh] px-6 mx-auto max-w-7xl lg:px-8"
       >
         {/* menu button */}
         <div className="flex lg:hidden">
