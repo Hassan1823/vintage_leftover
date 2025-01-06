@@ -28,11 +28,7 @@ const Checkout = () => {
                 Your perfect look is just a click away!
               </p>
             </div>
-            <form
-              action="#"
-              method="POST"
-              className="max-w-xl mx-auto mt-[4vh] sm:mt-[4vh]"
-            >
+            <form className="max-w-xl mx-auto mt-[4vh] sm:mt-[4vh]">
               <div className="grid grid-cols-1 gap-x-8 gap-y-[2vh] sm:grid-cols-2">
                 {/* first name */}
                 <div>
