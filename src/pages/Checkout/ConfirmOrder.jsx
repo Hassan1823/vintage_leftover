@@ -10,18 +10,18 @@ const ConfirmOrder = () => {
       <HomeLayout>
         {/* <BannerNotification /> */}
         <div className=" w-full h-auto min-h-screen py-[1%] mb-[4vh]">
-          <h1 className="flex items-center justify-end w-full h-auto capitalize font-semibold text-[1rem] mb-[.5vh] pe-[4vw]">
+          {/* <h1 className="flex items-center justify-end w-full h-auto capitalize font-semibold text-[1rem] mb-[.5vh] pe-[4vw]">
             <Link
               to="/login"
               className="underline capitalize text-[.9rem] font-semibold"
             >
               Login
             </Link>
-          </h1>
+          </h1> */}
           {/* main container */}
           <div className="flex flex-col items-start justify-start w-full h-full px-6 bg-white isolate lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-4xl font-semibold tracking-tight text-gray-900 text-balance sm:text-5xl">
+              <h2 className="text-4xl mt-[1vh] font-semibold tracking-tight text-gray-900 text-balance sm:text-5xl">
                 Delivery
               </h2>
               <p className="mt-2 text-gray-600 text-[.8rem] animate-pulse">
@@ -87,65 +87,7 @@ const ConfirmOrder = () => {
                   </div>
                 </div>
 
-                {/* /* address   */}
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="address"
-                    className="block font-semibold text-gray-900 text-sm/6"
-                  >
-                    Address
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      id="address"
-                      name="address"
-                      type="text"
-                      autoComplete="street-address"
-                      placeholder="Street Address"
-                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
-                    />
-                  </div>
-                </div>
-
-                {/* city and postal code */}
-                <div className="grid grid-cols-1 sm:col-span-2 sm:grid-cols-2 gap-x-8">
-                  <div>
-                    <label
-                      htmlFor="city"
-                      className="block font-semibold text-gray-900 text-sm/6"
-                    >
-                      City
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        id="city"
-                        name="city"
-                        type="text"
-                        autoComplete="address-level2"
-                        placeholder="City"
-                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="postal-code"
-                      className="block font-semibold text-gray-900 text-sm/6"
-                    >
-                      Postal Code
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        id="postal-code"
-                        name="postal-code"
-                        type="text"
-                        autoComplete="postal-code"
-                        placeholder="Postal Code"
-                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
-                      />
-                    </div>
-                  </div>
-                </div>
+                {/* phone number */}
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="phone-number"
@@ -176,8 +118,70 @@ const ConfirmOrder = () => {
                   </div>
                 </div>
 
-                {/* message */}
+                {/* city and postal code */}
+                <div className="grid grid-cols-1 sm:col-span-2 sm:grid-cols-2 gap-x-8">
+                  {/* city  */}
+                  <div>
+                    <label
+                      htmlFor="city"
+                      className="block font-semibold text-gray-900 text-sm/6"
+                    >
+                      City
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        id="city"
+                        name="city"
+                        type="text"
+                        autoComplete="address-level2"
+                        placeholder="City"
+                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
+                      />
+                    </div>
+                  </div>
+                  {/* postal code */}
+                  <div>
+                    <label
+                      htmlFor="postal-code"
+                      className="block font-semibold text-gray-900 text-sm/6"
+                    >
+                      Postal Code
+                    </label>
+                    <div className="mt-2.5">
+                      <input
+                        id="postal-code"
+                        name="postal-code"
+                        type="text"
+                        autoComplete="postal-code"
+                        placeholder="Postal Code"
+                        className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* /* address   */}
                 <div className="sm:col-span-2">
+                  <label
+                    htmlFor="address"
+                    className="block font-semibold text-gray-900 text-sm/6"
+                  >
+                    Address
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      id="address"
+                      name="address"
+                      type="text"
+                      autoComplete="street-address"
+                      placeholder="Street Address"
+                      className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424]"
+                    />
+                  </div>
+                </div>
+
+                {/* message */}
+                {/* <div className="sm:col-span-2">
                   <label
                     htmlFor="message"
                     className="block font-semibold text-gray-900 text-sm/6"
@@ -193,18 +197,20 @@ const ConfirmOrder = () => {
                       defaultValue={""}
                     />
                   </div>
-                </div>
+                </div> */}
+
+                {/* switch */}
                 <Field className="flex gap-x-4 sm:col-span-2">
                   <div className="flex items-center h-6">
                     <Switch
                       checked={agreed}
                       onChange={setAgreed}
-                      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#242424] data-[checked]:bg-[#242424]"
+                      className="group flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-[#242424]/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#242424] data-[checked]:bg-[#242424]"
                     >
                       <span className="sr-only">Agree to policies</span>
                       <span
                         aria-hidden="true"
-                        className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
+                        className="size-4 transform rounded-full bg-white shadow-sm ring-1 ring-[#242424]/5 transition duration-200 ease-in-out group-data-[checked]:translate-x-3.5"
                       />
                     </Switch>
                   </div>

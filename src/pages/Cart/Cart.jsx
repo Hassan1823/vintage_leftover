@@ -70,14 +70,14 @@ const Cart = ({ showCart, setShowCart }) => {
                         className={`${
                           activeCat !== "fav" && "border-r"
                         } px-2 py-1 duration-500 rounded-s ${
-                          activeCat === "cart" && "bg-orange-500 rounded"
-                        }  max-md:min-w-[20vw] min-w-[10vw] w-auto h-full active:border-orange-500 focus:border-orange-500 flex justify-center items-center`}
+                          activeCat === "cart" && "bg-[#242424] rounded"
+                        }  max-md:min-w-[20vw] min-w-[10vw] w-auto h-full active:border-[#242424] focus:border-[#242424] flex justify-center items-center`}
                       >
                         <IoCartOutline
                           className={`${
                             activeCat === "cart"
                               ? "text-white"
-                              : "text-orange-500"
+                              : "text-[#242424]"
                           } duration-500 max-md:size-5 size-8`}
                         />
                       </button>
@@ -85,14 +85,14 @@ const Cart = ({ showCart, setShowCart }) => {
                       <button
                         onClick={() => setActiveCat("fav")}
                         className={`px-2 py-1 duration-500 rounded-s ${
-                          activeCat === "fav" && "bg-orange-500 rounded"
+                          activeCat === "fav" && "bg-[#242424] rounded"
                         } max-md:min-w-[20vw] min-w-[10vw] w-auto active:outline-none focus:outline-none flex justify-center items-center border-none active:border-none`}
                       >
                         <MdOutlineFavoriteBorder
                           className={`${
                             activeCat === "fav"
                               ? "text-white"
-                              : "text-orange-500"
+                              : "text-[#242424]"
                           } duration-500 max-md:size-5 size-8`}
                         />
                       </button>
@@ -165,7 +165,7 @@ const Cart = ({ showCart, setShowCart }) => {
                   <div className="mt-6">
                     <Link
                       to="/checkout"
-                      className="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-orange-500 border border-transparent rounded-md shadow-sm hover:text-white hover:bg-orange-600"
+                      className="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#242424] border border-transparent rounded-md shadow-sm hover:text-white hover:bg-[#242424]/90"
                     >
                       Checkout
                     </Link>
