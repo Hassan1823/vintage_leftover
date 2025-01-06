@@ -13,7 +13,7 @@ import {
   ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 import HomeLayout from "../../components/extra/HomeLayout";
-import { placeholderNumber } from "../../components/lib/data";
+import { eligibleCities, placeholderNumber } from "../../components/lib/data";
 
 const ConfirmOrder = () => {
   const [agreed, setAgreed] = useState(true);
@@ -365,10 +365,11 @@ const ConfirmOrder = () => {
                         autoComplete="city-name"
                         className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-8 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-[#242424] sm:text-sm/6"
                       >
-                        <option>Wah Cant</option>
-                        <option>Taxila</option>
-                        <option>New City</option>
-                        <option>Nawabad</option>
+                        {eligibleCities?.map((city, idx) => (
+                          <option className="capitalize" key={idx}>
+                            {city}
+                          </option>
+                        ))}
                       </select>
                       <ChevronDownIcon
                         aria-hidden="true"

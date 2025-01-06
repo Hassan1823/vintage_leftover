@@ -359,3 +359,12 @@ export const reviewData = [
     review: "Excellent product! Highly recommend to everyone.",
   },
 ];
+
+// * eligible cities
+export const eligibleCities = [
+  "Wah Cant",
+  "Taxila",
+  "New City Phase 1",
+  "New City Phase 2",
+  "Nawababad",
+];
