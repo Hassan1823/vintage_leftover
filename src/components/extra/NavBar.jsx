@@ -87,6 +87,11 @@ const NavBar = ({ setShowCart, showCart }) => {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          {/* home */}
+          <Link to={"/"} className="font-semibold text-gray-900 text-sm/6">
+            Home
+          </Link>
+
           {/* men */}
           <Popover className="relative">
             <PopoverButton className="flex items-center font-semibold text-gray-900 capitalize border-none outline-none gap-x-1 text-sm/6">
@@ -304,6 +309,16 @@ const NavBar = ({ setShowCart, showCart }) => {
           <div className="flow-root mt-6">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="py-6 space-y-2">
+                {/* home */}
+                <Link
+                  to={"/"}
+                  onClick={() => setMobileMenuOpen(false)}
+                  s
+                  className="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                >
+                  Home
+                </Link>
+
                 {/* men */}
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">

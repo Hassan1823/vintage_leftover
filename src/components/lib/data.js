@@ -20,12 +20,12 @@ export const youtube = "/";
 
 // * menu list
 export const menuList = [
-  {
-    label: "Home",
-    path: "/",
-    icon: "HomeIcon",
-    active: false,
-  },
+  // {
+  //   label: "Home",
+  //   path: "/",
+  //   icon: "HomeIcon",
+  //   active: false,
+  // },
   // {
   //   label: "Men",
   //   path: "/men",
