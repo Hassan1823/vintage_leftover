@@ -368,3 +368,19 @@ export const eligibleCities = [
   "New City Phase 2",
   "Nawababad",
 ];
+
+// * links
+export const links = [
+  { name: "Top Products", href: "/" },
+  { name: "Offers", href: "/" },
+  { name: "Men", href: "/" },
+  { name: "Women", href: "/" },
+];
+
+// * stats
+export const stats = [
+  { name: "Positive Reviews", value: "1275" },
+  { name: "Products", value: "300+" },
+  { name: "Availability", value: "24/7" },
+  // { name: "Paid time off", value: "Unlimited" },
+];

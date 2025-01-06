@@ -8,6 +8,7 @@ import Register from "./pages/Register/Register";
 
 import ConfirmOrder from "./pages/Checkout/ConfirmOrder";
 import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/AboutUs/About";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/men" element={<Home />} />
         <Route path="/women" element={<Home />} />
         <Route path="/sale" element={<Home />} />
-        <Route path="/about" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Home />} />
         <Route path="/profile" element={<Home />} />
 
