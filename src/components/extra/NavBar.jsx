@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -25,37 +25,53 @@ import {
 } from "../lib/data";
 import { TbBrandYoutube } from "react-icons/tb";
 import { RiTiktokLine } from "react-icons/ri";
+import { getAllMenu } from "../../api/menuApi";
 
 const products = [
   {
     name: "Top",
     description: "Explore our collection of stylish tops",
-    href: "#",
+    link: "/",
   },
   {
     name: "Bottom",
     description: "Discover comfortable and trendy bottoms",
-    href: "#",
+    link: "/",
   },
   {
     name: "Tees",
     description: "Find the perfect tees for any occasion",
-    href: "#",
+    link: "/",
   },
   {
     name: "Jeans",
     description: "Shop our range of durable and fashionable jeans",
-    href: "#",
+    link: "/",
   },
   {
     name: "Trousers",
     description: "Browse our selection of versatile trousers",
-    href: "#",
+    link: "/",
   },
 ];
 
 const NavBar = ({ setShowCart, showCart }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [menu, setMenu] = useState(null);
+
+  // * get all menu data
+  const getMenu = async () => {
+    const menu = await getAllMenu();
+    setMenu(menu?.data);
+  };
+  useEffect(() => {
+    // * get menu
+    getMenu();
+
+    // * setting the loading false
+    // setIsLoading(false);
+  }, []);
   return (
     <header className="bg-white border-b shadow-sm">
       <nav
@@ -86,157 +102,73 @@ const NavBar = ({ setShowCart, showCart }) => {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {/* home */}
-          <Link to={"/"} className="font-semibold text-gray-900 text-sm/6">
-            Home
-          </Link>
-
-          {/* men */}
-          <Popover className="relative">
-            <PopoverButton className="flex items-center font-semibold text-gray-900 capitalize border-none outline-none gap-x-1 text-sm/6">
-              Men
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="flex-none text-gray-400 size-5"
-              />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="relative flex items-center p-2 rounded-lg group gap-x-6 text-sm/6 hover:bg-gray-300"
-                  >
-                    <div className="flex items-center justify-center flex-none bg-gray-300 rounded-lg size-11 group-hover:bg-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="size-5"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                        />
-                      </svg>
-                    </div>
-                    <div className="flex-auto">
-                      <a
-                        href={item.href}
-                        className="block font-semibold text-gray-900"
-                      >
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-[1px] text-gray-600">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon
+          {menu?.map((item, idx) => (
+            <>
+              {item?.subMenu.length !== 0 ? (
+                <Popover className="relative">
+                  <PopoverButton className="flex items-center font-semibold text-gray-900 capitalize border-none outline-none gap-x-1 text-sm/6">
+                    {item?.name}
+                    <ChevronDownIcon
                       aria-hidden="true"
-                      className="flex-none text-gray-400 size-5"
+                      className="flex-none text-gray-800 size-5"
                     />
-                    {item.name}
-                  </a>
-                ))}
-              </div> */}
-            </PopoverPanel>
-          </Popover>
+                  </PopoverButton>
 
-          {/* women */}
-          <Popover className="relative">
-            <PopoverButton className="flex items-center font-semibold text-gray-900 capitalize border-none outline-none gap-x-1 text-sm/6">
-              Women
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="flex-none text-gray-400 size-5"
-              />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="relative flex items-center p-2 rounded-lg group gap-x-6 text-sm/6 hover:bg-gray-300"
+                  <PopoverPanel
+                    transition
+                    className="absolute -left-8 top-full z-10 mt-3 w-auto max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                   >
-                    <div className="flex items-center justify-center flex-none bg-gray-300 rounded-lg size-11 group-hover:bg-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="size-5"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                        />
-                      </svg>
+                    <div className="p-4">
+                      {item?.subMenu.map((item) => (
+                        <div
+                          key={item.name}
+                          className="relative flex items-center p-2 rounded-lg group gap-x-6 text-sm/6 hover:bg-gray-300"
+                        >
+                          <div className="flex items-center justify-center flex-none bg-gray-300 rounded-lg size-8 group-hover:bg-white">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="currentColor"
+                              className="size-4"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                              />
+                            </svg>
+                          </div>
+                          <div className="flex-auto">
+                            <a
+                              href={item.link}
+                              className="block font-semibold text-gray-900 capitalize"
+                            >
+                              {item.name}
+                              <span className="absolute inset-0" />
+                            </a>
+                            {item.description && (
+                              <p className="mt-[1px] text-gray-600">
+                                {item.description}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    <div className="flex-auto">
-                      <a
-                        href={item.href}
-                        className="block font-semibold text-gray-900"
-                      >
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-[1px] text-gray-600">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon
-                      aria-hidden="true"
-                      className="flex-none text-gray-400 size-5"
-                    />
-                    {item.name}
-                  </a>
-                ))}
-              </div> */}
-            </PopoverPanel>
-          </Popover>
-
-          {menuList?.map((item, idx) => (
-            <Link
-              key={idx}
-              to={item?.path}
-              className="font-semibold text-gray-900 text-sm/6"
-            >
-              {item?.label}
-            </Link>
+                  </PopoverPanel>
+                </Popover>
+              ) : (
+                <Link
+                  key={idx}
+                  to={item?.link}
+                  className="font-semibold text-gray-900 text-sm/6"
+                >
+                  {item?.name}
+                </Link>
+              )}
+            </>
           ))}
           {/* <a href="#" className="font-semibold text-gray-900 text-sm/6">
             Marketplace
@@ -309,74 +241,54 @@ const NavBar = ({ setShowCart, showCart }) => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="py-6 space-y-2">
                 {/* home */}
-                <Link
+                {/* <Link
                   to={"/"}
                   onClick={() => setMobileMenuOpen(false)}
                   s
                   className="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
                 >
                   Home
-                </Link>
-
-                {/* men */}
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Men
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <Link
-                        key={item.name}
-                        as="a"
-                        onClick={() => setMobileMenuOpen(false)}
-                        to={item.href}
-                        className="block py-2 pl-6 pr-3 font-semibold text-gray-900 rounded-lg text-sm/7 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-
-                {/* women */}
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Women
-                    <ChevronDownIcon
-                      aria-hidden="true"
-                      className="size-5 flex-none group-data-[open]:rotate-180"
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block py-2 pl-6 pr-3 font-semibold text-gray-900 rounded-lg text-sm/7 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
+                </Link> */}
 
                 {/* menu items */}
                 <div className="flex flex-col items-start justify-start w-full h-auto">
-                  {menuList?.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      to={item?.path}
-                      onClick={() => setMobileMenuOpen(false)}
-                      s
-                      className="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
-                    >
-                      {item?.label}
-                    </Link>
+                  {menu?.map((item, idx) => (
+                    <>
+                      {item?.subMenu.length !== 0 ? (
+                        <Disclosure as="div" className="-mx-3">
+                          <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 capitalize">
+                            {item?.name}
+                            <ChevronDownIcon
+                              aria-hidden="true"
+                              className="size-5 flex-none group-data-[open]:rotate-180"
+                            />
+                          </DisclosureButton>
+                          <DisclosurePanel className="mt-2 space-y-2">
+                            {item?.subMenu.map((item) => (
+                              <DisclosureButton
+                                key={item.name}
+                                as="a"
+                                onClick={() => setMobileMenuOpen(false)}
+                                href={item.link}
+                                className="block py-2 pl-6 pr-3 font-semibold text-gray-900 capitalize rounded-lg text-sm/7 hover:bg-gray-50"
+                              >
+                                {item.name}
+                              </DisclosureButton>
+                            ))}
+                          </DisclosurePanel>
+                        </Disclosure>
+                      ) : (
+                        <Link
+                          key={idx}
+                          to={item?.link}
+                          onClick={() => setMobileMenuOpen(false)}
+                          s
+                          className="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                        >
+                          {item?.name}
+                        </Link>
+                      )}
+                    </>
                   ))}
                 </div>
 

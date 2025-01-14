@@ -5,9 +5,10 @@ import { categories, productsData } from "../lib/data";
 import { Link } from "react-router-dom";
 import CategoryButton from "./CategoryButton";
 
-const TopProducts = () => {
+const TopProducts = ({ productData }) => {
   const [activeCat, setActiveCat] = useState("All");
   const [showCategory, setShowCategory] = useState(true);
+
   return (
     <div className="flex flex-col duration-500 items-center justify-center w-[98%] md:w-[95vw] lg:w-[90vw] h-auto mt-[2vh]">
       {/* category list buttons */}
@@ -54,8 +55,8 @@ const TopProducts = () => {
 
       {/* products */}
       <div className="flex flex-wrap gap-x-[4vw] gap-y-[2vh] items-center w-full h-auto duration-500 justify-center py-[2vh]">
-        {productsData?.map((product, idx) => {
-          return <ProductCard key={idx} data={product} id={idx} />;
+        {productData?.map((product, idx) => {
+          return <ProductCard key={idx} data={product} id={product?._id} />;
         })}
       </div>
 

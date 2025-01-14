@@ -1,3 +1,7 @@
+//* backend Url
+// export const backendUrl = "http://localhost:8000/api";
+export const backendUrl = "https://vintage-server-3cma.vercel.app/api";
+
 // * phone number
 export const phoneNumber = "+92 3085504450";
 

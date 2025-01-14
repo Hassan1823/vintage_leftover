@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/extra/Banner";
 import BannerImage from "../../components/extra/BannerImage";
 import HomeLayout from "../../components/extra/HomeLayout";
@@ -7,11 +7,40 @@ import TopProducts from "../../components/extra/TopProducts";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { reviewData } from "../../components/lib/data";
 import ReviewCard from "../../components/extra/ReviewCard";
+import { getAllProducts } from "../../api/productApi";
+import Loader from "../../components/extra/Loader";
+import { getAllMenu } from "../../api/menuApi";
 
 const Home = () => {
   //  const { state, setState } = useContext(MyContext);
   const [customBanner, setCustomBanner] = useState(false);
   const [openReviews, setOpenReviews] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [productData, setProductData] = useState(null);
+
+  // * get all products data
+  const getProducts = async () => {
+    const products = await getAllProducts();
+    console.log("🐱‍👤✨ ~ getProducts ~ products:", products.data);
+    setProductData(products.data);
+  };
+
+  useEffect(() => {
+    // * get products
+    getProducts();
+
+    // * setting the loading false
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center w-dvh h-dvh">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div>
       {/* use context template */}
@@ -33,7 +62,7 @@ const Home = () => {
 
         {/* top products of the season */}
         <div className="flex items-center justify-center w-full h-auto">
-          <TopProducts />
+          <TopProducts productData={productData || []} />
         </div>
 
         {/* product reviews */}
